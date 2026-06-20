@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPTとは？【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説 | AI図解ラボ</title>
+<meta name="description" content="ChatGPTとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+
+<!-- OGP -->
+<meta property="og:title" content="ChatGPTとは？【30秒でわかる図解】 | AI図解ラボ">
+<meta property="og:description" content="ChatGPTとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+<meta property="og:image" content="/images/chatgpt-zukai-explanation.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+
+<!-- 構造化データ：Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ChatGPTとは？仕組み・できること・使い方を初心者向け解説",
+  "image": "https://zukailab.com/images/chatgpt-zukai-explanation.png",
+  "author": {"@type": "Person", "name": "Hiro"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI図解ラボ",
+    "logo": {"@type": "ImageObject", "url": "https://zukailab.com/images/logo.png"}
+  },
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://zukailab.com/ai/chatgpt/"},
+  "description": "ChatGPTとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
+}
+</script>
+
+<!-- 構造化データ：BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://zukailab.com/"},
+    {"@type": "ListItem", "position": 2, "name": "AI", "item": "https://zukailab.com/ai/"},
+    {"@type": "ListItem", "position": 3, "name": "ChatGPTとは？"}
+  ]
+}
+</script>
+
+<!-- 構造化データ：FAQPage（本文と完全一致） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "ChatGPTとは何ですか？","acceptedAnswer": {"@type": "Answer","text": "ChatGPTは、OpenAIが開発した文章で会話できるAIサービスです。質問や相談に対して自然な文章で答えてくれます。"}},
+    {"@type": "Question","name": "ChatGPTは無料で使えますか？","acceptedAnswer": {"@type": "Answer","text": "無料プランがあり、基本的な機能は無料で利用できます。より高度な機能を使いたい場合は有料プラン（ChatGPT Plus）が用意されています。"}},
+    {"@type": "Question","name": "ChatGPTにはどんな種類がありますか？","acceptedAnswer": {"@type": "Answer","text": "無料版のほか、ChatGPT Plus・Team・Enterpriseなど用途に応じたプランがあります。"}},
+    {"@type": "Question","name": "ChatGPTの回答は必ず正しいですか？","acceptedAnswer": {"@type": "Answer","text": "いいえ。AIの回答は間違っていることもあるため、重要な情報は自分で確認することが大切です。"}},
+    {"@type": "Question","name": "ChatGPTに個人情報を入力しても大丈夫ですか？","acceptedAnswer": {"@type": "Answer","text": "名前・住所・電話番号などの個人情報は入力しないことをおすすめします。"}},
+    {"@type": "Question","name": "ChatGPTはスマホでも使えますか？","acceptedAnswer": {"@type": "Answer","text": "はい。公式アプリやブラウザから、スマホでも問題なく利用できます。"}},
+    {"@type": "Question","name": "ChatGPTは日本語に対応していますか？","acceptedAnswer": {"@type": "Answer","text": "はい。日本語の質問にも自然な日本語で回答してくれます。"}},
+    {"@type": "Question","name": "ChatGPTは何ができますか？","acceptedAnswer": {"@type": "Answer","text": "調べもの、文章作成、要約、翻訳、アイデア出しなど幅広い用途に使えます。"}},
+    {"@type": "Question","name": "ChatGPTを使うのに専門知識は必要ですか？","acceptedAnswer": {"@type": "Answer","text": "不要です。話しかけるように質問するだけで使えるため、初心者でも問題ありません。"}},
+    {"@type": "Question","name": "ChatGPTとClaudeの違いは何ですか？","acceptedAnswer": {"@type": "Answer","text": "両方とも文章で会話できるAIですが、得意分野や回答の傾向に違いがあります。詳しくは比較記事で解説しています。"}},
+    {"@type": "Question","name": "ChatGPTで作った文章は商用利用できますか？","acceptedAnswer": {"@type": "Answer","text": "多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。"}},
+    {"@type": "Question","name": "ChatGPTはどんな仕組みで回答していますか？","acceptedAnswer": {"@type": "Answer","text": "大量の文章データを学習したAIが、質問の内容を理解し、最も自然な回答を文章として生成しています。"}},
+    {"@type": "Question","name": "ChatGPTを使うと作業時間は短縮できますか？","acceptedAnswer": {"@type": "Answer","text": "はい。文章作成や調べものなどの時間を大きく短縮できるケースが多いです。"}},
+    {"@type": "Question","name": "ChatGPTはビジネスでも使われていますか？","acceptedAnswer": {"@type": "Answer","text": "はい。メール作成や資料の下書き、アイデア出しなど、ビジネスの現場でも広く活用されています。"}},
+    {"@type": "Question","name": "ChatGPTを使い始めるにはどうすればいいですか？","acceptedAnswer": {"@type": "Answer","text": "公式サイトやアプリからアカウントを登録するだけで、すぐに使い始めることができます。"}}
+  ]
+}
+</script>
+
+<style>
+:root{
+  --ink:#0B1426;
+  --ink2:#3D4F6A;
+  --ink3:#7A8C9E;
+  --bg:#F8F9FC;
+  --surface:#FFFFFF;
+  --navy:#0B1426;
+  --navy-mid:#1A2E4A;
+  --emerald:#00C896;
+  --emerald-dim:#00C89620;
+  --emerald-light:#E6FAF5;
+  --purple:#6C63FF;
+  --purple-light:#F0EFFF;
+  --amber:#F5A623;
+  --amber-light:#FEF6E7;
+  --red:#E5484D;
+  --red-light:#FDECEC;
+  --border:rgba(11,20,38,0.09);
+  --r:10px;
+  --r-lg:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER（トップページと共通） ── */
+.header{background:var(--navy);position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 1px 0 rgba(0,200,150,0.15)}
+.logo{font-family:'Zen Kaku Gothic New',sans-serif;font-size:19px;font-weight:900;color:#fff;letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:6px}
+.logo-mark{width:26px;height:26px;background:var(--emerald);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.logo span{color:var(--emerald)}
+.header-nav{margin-left:auto;display:flex;gap:2px;align-items:center}
+.nav-link{color:rgba(255,255,255,0.65);font-size:13px;text-decoration:none;padding:6px 11px;border-radius:7px;transition:background .15s}
+.nav-link:hover{background:rgba(255,255,255,0.09);color:#fff}
+
+.container{max-width:760px;margin:0 auto;padding:0 24px}
+
+/* ── パンくず ── */
+.breadcrumb{font-size:12px;color:var(--ink3);padding:16px 0 0}
+.breadcrumb a{color:var(--ink3);text-decoration:none}
+.breadcrumb a:hover{color:var(--emerald)}
+
+/* ── 記事ヘッダー ── */
+.article-header{padding:20px 0 28px}
+.category-badge{display:inline-block;background:var(--emerald-light);color:#005740;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.article-h1{font-family:'Zen Kaku Gothic New',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:900;color:var(--ink);line-height:1.3;letter-spacing:-0.02em;margin-bottom:14px}
+.article-subcopy{display:inline-block;background:var(--amber-light);color:#7A4D00;font-size:14px;font-weight:700;padding:8px 16px;border-radius:8px;line-height:1.6}
+
+/* ── 図解画像（主役） ── */
+.zukai-wrap{text-align:center;margin:28px 0}
+.zukai-wrap img{max-width:600px;width:100%;border-radius:var(--r-lg);box-shadow:0 12px 40px rgba(11,20,38,0.12);border:1px solid var(--border)}
+
+/* ── 保存版バナー ── */
+.save-banner{background:var(--navy);color:#fff;font-size:13px;font-weight:700;text-align:center;padding:10px 16px;border-radius:var(--r);margin:20px 0;display:flex;align-items:center;justify-content:center;gap:8px}
+.save-banner .pin{color:var(--emerald)}
+
+/* ── 一言結論ボックス ── */
+.conclusion-box{background:var(--emerald-light);border:1px solid rgba(0,200,150,0.3);border-radius:var(--r-lg);padding:18px 22px;margin:20px 0;font-size:15px;font-weight:700;color:#005740;line-height:1.7}
+
+/* ── 3行要約ボックス ── */
+.summary-box{background:var(--navy);border-radius:var(--r-lg);padding:22px 24px;margin:20px 0 36px}
+.summary-box-title{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:12px;text-transform:uppercase}
+.summary-row{display:flex;gap:10px;color:rgba(255,255,255,0.88);font-size:14px;line-height:1.7;margin-bottom:8px}
+.summary-row:last-child{margin-bottom:0}
+.summary-num{color:var(--emerald);font-weight:900;flex-shrink:0}
+
+/* ── 本文セクション ── */
+.content-section{margin:40px 0}
+.content-h2{font-family:'Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:14px;padding-left:14px;border-left:4px solid var(--emerald)}
+.content-section p{font-size:15px;color:var(--ink2);line-height:1.9;margin-bottom:14px}
+
+/* ── 著者ボックス（E-E-A-T） ── */
+.author-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;margin:40px 0;display:flex;gap:16px;align-items:flex-start}
+.author-avatar{width:52px;height:52px;border-radius:50%;background:var(--purple-light);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;flex-shrink:0;font-family:'Zen Kaku Gothic New',sans-serif}
+.author-info{flex:1}
+.author-name{font-size:14px;font-weight:900;color:var(--ink);margin-bottom:6px}
+.author-bio{font-size:13px;color:var(--ink2);line-height:1.8}
+
+/* ── 関連用語 ── */
+.related-terms{display:flex;flex-direction:column;gap:8px;margin:20px 0 40px}
+.related-term-link{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:700;transition:border-color .15s,transform .15s}
+.related-term-link:hover{border-color:var(--emerald);transform:translateX(3px)}
+.related-term-step{width:22px;height:22px;border-radius:50%;background:var(--emerald-light);color:#005740;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.related-term-arrow{margin-left:auto;color:var(--emerald)}
+
+/* ── FAQ アコーディオン ── */
+.faq-list{display:flex;flex-direction:column;gap:10px;margin:20px 0 40px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.faq-item summary{padding:16px 18px;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:10px;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::before{content:'Q';flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--emerald);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.faq-item[open] summary::before{background:var(--navy)}
+.faq-answer{padding:0 18px 16px 50px;font-size:13.5px;color:var(--ink2);line-height:1.8}
+
+/* ── 関連記事 ── */
+.related-articles-title{font-size:13px;font-weight:700;color:var(--ink3);margin-bottom:10px;letter-spacing:.04em}
+.related-articles{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:24px}
+.related-article-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;text-decoration:none;color:inherit;display:flex;align-items:center;justify-content:space-between;transition:border-color .15s}
+.related-article-card:hover{border-color:var(--purple)}
+.related-article-name{font-size:13.5px;font-weight:700;color:var(--ink)}
+.related-article-arrow{color:var(--purple);flex-shrink:0;margin-left:10px}
+
+/* ── 末尾CTA ── */
+.final-cta{background:linear-gradient(140deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:var(--r-lg);padding:32px 26px;margin:40px 0;text-align:center}
+.final-cta-eyebrow{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:10px;text-transform:uppercase}
+.final-cta-title{font-family:'Zen Kaku Gothic New',sans-serif;color:#fff;font-size:18px;font-weight:900;margin-bottom:20px;line-height:1.5}
+.final-cta-list{display:flex;flex-direction:column;gap:8px}
+.final-cta-link{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;padding:13px 18px;border-radius:var(--r);text-align:left;display:flex;align-items:center;justify-content:space-between;transition:background .15s}
+.final-cta-link:hover{background:rgba(0,200,150,0.18);border-color:var(--emerald)}
+.final-cta-link.primary{background:var(--emerald);color:var(--navy);border-color:var(--emerald)}
+.final-cta-link.primary:hover{opacity:.9}
+.pr-note{font-size:11px;color:var(--ink3);text-align:center;margin:16px 0;padding:8px;background:var(--bg);border-radius:6px}
+
+/* ── フッター ── */
+.footer{background:var(--navy);padding:32px 24px;text-align:center;margin-top:48px}
+.footer-text{color:rgba(255,255,255,0.4);font-size:12px}
+.footer-links{display:flex;gap:16px;justify-content:center;margin-bottom:14px}
+.footer-links a{color:rgba(255,255,255,0.6);font-size:12px;text-decoration:none}
+
+@media(max-width:480px){
+  .article-header{padding:16px 0 22px}
+  .author-box{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="header">
+  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<span>図解</span>ラボ</a>
+  <nav class="header-nav">
+    <a href="/ai/" class="nav-link">AI</a>
+    <a href="/efficiency/" class="nav-link">業務効率化</a>
+    <a href="/compare/" class="nav-link">比較</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- パンくず -->
+  <nav class="breadcrumb">
+    <a href="/">ホーム</a> &gt; <a href="/ai/">AI</a> &gt; ChatGPTとは？
+  </nav>
+
+  <!-- 記事ヘッダー -->
+  <article>
+    <header class="article-header">
+      <span class="category-badge">AI・生成AI</span>
+      <h1 class="article-h1">ChatGPTとは？</h1>
+      <p class="article-subcopy">【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説</p>
+    </header>
+
+    <!-- 図解画像（主役） -->
+    <div class="zukai-wrap">
+      <img src="/images/chatgpt-zukai-explanation.png"
+           alt="ChatGPTの仕組みを図解したイラスト。定義・仕組み・メリット・活用例・注意点・まとめの6項目を解説"
+           width="1080" height="1350" loading="eager">
+    </div>
+
+    <!-- 保存版バナー -->
+    <div class="save-banner"><span class="pin">📌</span> 保存版｜あとで見返したい人はブックマーク推奨</div>
+
+    <!-- 一言結論ボックス -->
+    <div class="conclusion-box">
+      ChatGPTとは、文章で会話できるAIサービス。質問するだけで、調べもの・文章作成・アイデア出しまで幅広くサポートしてくれます。
+    </div>
+
+    <!-- 3行要約ボックス -->
+    <div class="summary-box">
+      <div class="summary-box-title">30秒でわかる要約</div>
+      <div class="summary-row"><span class="summary-num">①</span>ChatGPTはOpenAIが開発した対話AI</div>
+      <div class="summary-row"><span class="summary-num">②</span>質問するだけで自然な文章で回答してくれる</div>
+      <div class="summary-row"><span class="summary-num">③</span>調べもの・文章作成・アイデア出しに使える</div>
+    </div>
+
+    <!-- ①定義 -->
+    <section class="content-section">
+      <h2 class="content-h2">ChatGPTとは（定義）</h2>
+      <p>ChatGPTとは、OpenAIが開発した対話型のAI（人工知能）サービスです。チャット画面に質問や相談を入力するだけで、AIが自然な文章で回答してくれます。</p>
+      <p>難しい専門知識は不要で、友人に話しかけるような感覚で利用できるのが特徴です。文章のやりとりだけで、調べもの・文章作成・アイデア出しなど幅広い用途に対応できます。</p>
+    </section>
+
+    <!-- ②仕組み -->
+    <section class="content-section">
+      <h2 class="content-h2">ChatGPTの仕組み</h2>
+      <p>ChatGPTは、インターネット上の大量の文章データを学習した「大規模言語モデル」という技術をもとに動いています。質問を入力すると、AIがその内容を理解し、もっとも自然な言葉のつながりを予測しながら回答を組み立てて表示します。</p>
+      <p>人間のように「考えて答えている」わけではなく、学習したパターンから最適な文章を生成している、という点を理解しておくと使い方の幅が広がります。</p>
+    </section>
+
+    <!-- ③できること -->
+    <section class="content-section">
+      <h2 class="content-h2">ChatGPTでできること</h2>
+      <p>ChatGPTは機能ベースで見ると、主に次のようなことができます。</p>
+      <p><strong>文章作成：</strong>メール・レポート・ブログ記事などの下書きを短時間で作成できます。<br>
+      <strong>要約：</strong>長い文章やニュースの内容を簡潔にまとめてくれます。<br>
+      <strong>翻訳：</strong>外国語の文章を自然な日本語に変換できます。<br>
+      <strong>アイデア出し：</strong>企画や記事のテーマなど、考えるきっかけを提案してくれます。</p>
+    </section>
+
+    <!-- ④活用例 -->
+    <section class="content-section">
+      <h2 class="content-h2">ChatGPTの活用例</h2>
+      <p>実際にどんな人がどう使っているか、人物別に見てみましょう。</p>
+      <p><strong>学生：</strong>レポートの構成案を相談したり、難しい用語の意味を質問したりするのに使われています。<br>
+      <strong>会社員：</strong>メールの文章を整えたり、資料の骨子を考える際の相談相手として活用されています。<br>
+      <strong>ブロガー：</strong>記事のアイデア出しや見出し構成の検討に使われています。<br>
+      <strong>主婦：</strong>レシピの提案や家計管理のアイデアを聞く使い方があります。<br>
+      <strong>就活生：</strong>自己PRやエントリーシートの文章添削に活用されています。</p>
+    </section>
+
+    <!-- ⑤注意点 -->
+    <section class="content-section">
+      <h2 class="content-h2">ChatGPTの注意点</h2>
+      <p>便利な一方で、使う際に知っておきたい注意点もあります。</p>
+      <p><strong>①情報は確認する：</strong>AIの回答は間違っている場合もあるため、重要な情報は自分で確認しましょう。<br>
+      <strong>②個人情報を入力しない：</strong>名前・住所・電話番号などの個人情報は入力しないようにしましょう。<br>
+      <strong>③回答をうのみにしない：</strong>最終的な判断は自分で行い、参考情報として活用しましょう。<br>
+      <strong>④著作権に注意する：</strong>生成された文章や画像を使う際は、著作権や利用規約を確認しましょう。</p>
+    </section>
+
+    <!-- ⑥まとめ -->
+    <section class="content-section">
+      <h2 class="content-h2">まとめ</h2>
+      <p>ChatGPTは、文章で会話できる身近なAIです。調べもの・学習・文章作成など、さまざまな場面で時間と手間を減らす助けになります。情報の確認や個人情報の保護といった注意点を守りながら使うことで、日常や仕事における強力なパートナーとして役立てることができます。</p>
+    </section>
+
+    <!-- 著者ボックス（E-E-A-T／事実ベースのみ） -->
+    <div class="author-box">
+      <div class="author-avatar">H</div>
+      <div class="author-info">
+        <div class="author-name">この記事を書いた人：Hiro</div>
+        <div class="author-bio">
+          Web広告・SEO運用歴20年。Google・Yahoo!・TikTok広告の実務経験あり。FP2級・簿記資格保有。AI・SaaSツールを日常的に活用しながら、初心者向けにわかりやすく解説しています。
+        </div>
+      </div>
+    </div>
+
+    <!-- 関連用語（学習順） -->
+    <section class="content-section">
+      <h2 class="content-h2">関連用語（この順番で学ぶのがおすすめ）</h2>
+      <div class="related-terms">
+        <a href="/ai/generative-ai/" class="related-term-link">
+          <span class="related-term-step">①</span>生成AIとは <span class="related-term-arrow">→</span>
+        </a>
+        <a href="/ai/prompt/" class="related-term-link">
+          <span class="related-term-step">②</span>プロンプトとは <span class="related-term-arrow">→</span>
+        </a>
+        <a href="/ai/gpt-4o/" class="related-term-link">
+          <span class="related-term-step">③</span>GPT-4oとは <span class="related-term-arrow">→</span>
+        </a>
+        <a href="/compare/chatgpt-plan/" class="related-term-link">
+          <span class="related-term-step">④</span>ChatGPT Plusとは <span class="related-term-arrow">→</span>
+        </a>
+        <a href="/ai/ai-agent/" class="related-term-link">
+          <span class="related-term-step">⑤</span>AIエージェントとは <span class="related-term-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ 15問 -->
+    <section class="content-section">
+      <h2 class="content-h2">よくある質問</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>ChatGPTとは何ですか？</summary>
+          <p class="faq-answer">ChatGPTは、OpenAIが開発した文章で会話できるAIサービスです。質問や相談に対して自然な文章で答えてくれます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTは無料で使えますか？</summary>
+          <p class="faq-answer">無料プランがあり、基本的な機能は無料で利用できます。より高度な機能を使いたい場合は有料プラン（ChatGPT Plus）が用意されています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTにはどんな種類がありますか？</summary>
+          <p class="faq-answer">無料版のほか、ChatGPT Plus・Team・Enterpriseなど用途に応じたプランがあります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTの回答は必ず正しいですか？</summary>
+          <p class="faq-answer">いいえ。AIの回答は間違っていることもあるため、重要な情報は自分で確認することが大切です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTに個人情報を入力しても大丈夫ですか？</summary>
+          <p class="faq-answer">名前・住所・電話番号などの個人情報は入力しないことをおすすめします。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTはスマホでも使えますか？</summary>
+          <p class="faq-answer">はい。公式アプリやブラウザから、スマホでも問題なく利用できます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTは日本語に対応していますか？</summary>
+          <p class="faq-answer">はい。日本語の質問にも自然な日本語で回答してくれます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTは何ができますか？</summary>
+          <p class="faq-answer">調べもの、文章作成、要約、翻訳、アイデア出しなど幅広い用途に使えます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTを使うのに専門知識は必要ですか？</summary>
+          <p class="faq-answer">不要です。話しかけるように質問するだけで使えるため、初心者でも問題ありません。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTとClaudeの違いは何ですか？</summary>
+          <p class="faq-answer">両方とも文章で会話できるAIですが、得意分野や回答の傾向に違いがあります。詳しくは比較記事で解説しています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTで作った文章は商用利用できますか？</summary>
+          <p class="faq-answer">多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTはどんな仕組みで回答していますか？</summary>
+          <p class="faq-answer">大量の文章データを学習したAIが、質問の内容を理解し、最も自然な回答を文章として生成しています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTを使うと作業時間は短縮できますか？</summary>
+          <p class="faq-answer">はい。文章作成や調べものなどの時間を大きく短縮できるケースが多いです。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTはビジネスでも使われていますか？</summary>
+          <p class="faq-answer">はい。メール作成や資料の下書き、アイデア出しなど、ビジネスの現場でも広く活用されています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>ChatGPTを使い始めるにはどうすればいいですか？</summary>
+          <p class="faq-answer">公式サイトやアプリからアカウントを登録するだけで、すぐに使い始めることができます。</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 関連記事（縦展開＝ChatGPT深掘り優先／横展開＝他AI比較は下） -->
+    <section class="content-section">
+      <h2 class="content-h2">関連記事</h2>
+
+      <div class="related-articles-title">▶ ChatGPTをもっと深く知る</div>
+      <div class="related-articles">
+        <a href="/ai/chatgpt-start/" class="related-article-card">
+          <span class="related-article-name">ChatGPTの始め方【無料登録から解説】</span>
+          <span class="related-article-arrow">→</span>
+        </a>
+        <a href="/ai/chatgpt-blog/" class="related-article-card">
+          <span class="related-article-name">ChatGPTでブログを書く方法</span>
+          <span class="related-article-arrow">→</span>
+        </a>
+        <a href="/ai/chatgpt-prompt/" class="related-article-card">
+          <span class="related-article-name">ChatGPTプロンプト例まとめ</span>
+          <span class="related-article-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="related-articles-title" style="margin-top:18px">▶ 他のAIと比べてみる</div>
+      <div class="related-articles">
+        <a href="/compare/chatgpt-vs-claude/" class="related-article-card">
+          <span class="related-article-name">ChatGPT vs Claude 徹底比較</span>
+          <span class="related-article-arrow">→</span>
+        </a>
+        <a href="/ai/claude/" class="related-article-card">
+          <span class="related-article-name">Claudeとは？図解でわかる解説</span>
+          <span class="related-article-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 末尾CTA -->
+    <div class="final-cta">
+      <div class="final-cta-eyebrow">次に読むなら</div>
+      <div class="final-cta-title">ChatGPTをもっと使いこなすために</div>
+      <div class="final-cta-list">
+        <a href="/ai/chatgpt-start/" class="final-cta-link primary">① ChatGPTの始め方を見る <span>→</span></a>
+        <a href="/ai/chatgpt-prompt/" class="final-cta-link">② すぐ使えるプロンプト例 <span>→</span></a>
+        <a href="/compare/chatgpt-plan/" class="final-cta-link">③ 無料版とPlusの違いを比較 <span>→</span></a>
+        <a href="/guide/" class="final-cta-link">④ AIスクールで体系的に学ぶ <span>→</span></a>
+      </div>
+    </div>
+    <p class="pr-note">※本記事はアフィリエイトリンクを含みます</p>
+
+  </article>
+</div>
+
+<!-- フッター -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="/about/">運営者情報</a>
+    <a href="/privacy/">プライバシーポリシー</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+  <p class="footer-text">© 2026 AI図解ラボ</p>
+</footer>
+
+</body>
+</html>
