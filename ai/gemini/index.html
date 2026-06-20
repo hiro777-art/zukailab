@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geminiとは？【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説 | AI図解ラボ</title>
+<meta name="description" content="Geminiとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+
+<!-- OGP -->
+<meta property="og:title" content="Geminiとは？【30秒でわかる図解】 | AI図解ラボ">
+<meta property="og:description" content="Geminiとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+<meta property="og:image" content="/images/gemini-zukai-explanation.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+
+<!-- 構造化データ：Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Geminiとは？仕組み・できること・使い方を初心者向け解説",
+  "image": "https://zukailab.com/images/gemini-zukai-explanation.png",
+  "author": {"@type": "Person", "name": "Hiro"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI図解ラボ",
+    "logo": {"@type": "ImageObject", "url": "https://zukailab.com/images/logo.png"}
+  },
+  "datePublished": "2026-06-20",
+  "dateModified": "2026-06-20",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://zukailab.com/ai/gemini/"},
+  "description": "Geminiとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
+}
+</script>
+
+<!-- 構造化データ：BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://zukailab.com/"},
+    {"@type": "ListItem", "position": 2, "name": "AI", "item": "https://zukailab.com/ai/"},
+    {"@type": "ListItem", "position": 3, "name": "Geminiとは？"}
+  ]
+}
+</script>
+
+<!-- 構造化データ：FAQPage（本文と完全一致） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Geminiとは何ですか？","acceptedAnswer": {"@type": "Answer","text": "Geminiは、Googleが開発した文章で会話できるAIサービスです。質問や相談に対して自然な文章で答えてくれます。"}},
+    {"@type": "Question","name": "Geminiは無料で使えますか？","acceptedAnswer": {"@type": "Answer","text": "無料プランがあり、基本的な機能は無料で利用できます。より高度な機能を使いたい場合は有料プランが用意されています。"}},
+    {"@type": "Question","name": "Geminiにはどんな種類がありますか？","acceptedAnswer": {"@type": "Answer","text": "無料版のほか、個人向け・法人向けなど用途に応じたプランがあります。"}},
+    {"@type": "Question","name": "Geminiの回答は必ず正しいですか？","acceptedAnswer": {"@type": "Answer","text": "いいえ。AIの回答は間違っていることもあるため、重要な情報は自分で確認することが大切です。"}},
+    {"@type": "Question","name": "Geminiに個人情報を入力しても大丈夫ですか？","acceptedAnswer": {"@type": "Answer","text": "名前・住所・電話番号などの個人情報は入力しないことをおすすめします。"}},
+    {"@type": "Question","name": "Geminiはスマホでも使えますか？","acceptedAnswer": {"@type": "Answer","text": "はい。公式アプリやブラウザから、スマホでも問題なく利用できます。"}},
+    {"@type": "Question","name": "Geminiは日本語に対応していますか？","acceptedAnswer": {"@type": "Answer","text": "はい。日本語の質問にも自然な日本語で回答してくれます。"}},
+    {"@type": "Question","name": "Geminiは何ができますか？","acceptedAnswer": {"@type": "Answer","text": "調べもの、文章作成、要約、画像・音声・動画の理解、アイデア出しなど幅広い用途に使えます。"}},
+    {"@type": "Question","name": "Geminiにできないことはありますか？","acceptedAnswer": {"@type": "Answer","text": "すべての回答が常に正確とは限らず、感情を持って判断することもできません。重要な内容は自分でも確認しましょう。"}},
+    {"@type": "Question","name": "Geminiを使うのに専門知識は必要ですか？","acceptedAnswer": {"@type": "Answer","text": "不要です。話しかけるように質問するだけで使えるため、初心者でも問題ありません。"}},
+    {"@type": "Question","name": "GeminiはGoogleのサービスと連携できますか？","acceptedAnswer": {"@type": "Answer","text": "はい。GmailやGoogleドライブなど、Googleのサービスとスムーズに連携できる点が特徴です。"}},
+    {"@type": "Question","name": "Geminiで作った文章は商用利用できますか？","acceptedAnswer": {"@type": "Answer","text": "多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。"}},
+    {"@type": "Question","name": "Geminiはどんな仕組みで回答していますか？","acceptedAnswer": {"@type": "Answer","text": "大量のデータを学習したAIが、質問の内容を理解し、最新の検索結果なども踏まえて回答を文章として生成しています。"}},
+    {"@type": "Question","name": "Geminiを使うと作業時間は短縮できますか？","acceptedAnswer": {"@type": "Answer","text": "はい。文章作成や調べものなどの時間を大きく短縮できるケースが多いです。"}},
+    {"@type": "Question","name": "Geminiを使い始めるにはどうすればいいですか？","acceptedAnswer": {"@type": "Answer","text": "Googleアカウントがあれば、公式サイトやアプリからすぐに使い始めることができます。"}}
+  ]
+}
+</script>
+
+<style>
+:root{
+  --ink:#0B1426;
+  --ink2:#3D4F6A;
+  --ink3:#7A8C9E;
+  --bg:#F8F9FC;
+  --surface:#FFFFFF;
+  --navy:#0B1426;
+  --navy-mid:#1A2E4A;
+  --emerald:#00C896;
+  --emerald-dim:#00C89620;
+  --emerald-light:#E6FAF5;
+  --purple:#6C63FF;
+  --purple-light:#F0EFFF;
+  --amber:#F5A623;
+  --amber-light:#FEF6E7;
+  --red:#E5484D;
+  --red-light:#FDECEC;
+  --border:rgba(11,20,38,0.09);
+  --r:10px;
+  --r-lg:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER（トップページと共通） ── */
+.header{background:var(--navy);position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 1px 0 rgba(0,200,150,0.15)}
+.logo{font-family:'Zen Kaku Gothic New',sans-serif;font-size:19px;font-weight:900;color:#fff;letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:6px}
+.logo-mark{width:26px;height:26px;background:var(--emerald);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.logo span{color:var(--emerald)}
+.header-nav{margin-left:auto;display:flex;gap:2px;align-items:center}
+.nav-link{color:rgba(255,255,255,0.65);font-size:13px;text-decoration:none;padding:6px 11px;border-radius:7px;transition:background .15s}
+.nav-link:hover{background:rgba(255,255,255,0.09);color:#fff}
+
+.container{max-width:760px;margin:0 auto;padding:0 24px}
+
+/* ── パンくず ── */
+.breadcrumb{font-size:12px;color:var(--ink3);padding:16px 0 0}
+.breadcrumb a{color:var(--ink3);text-decoration:none}
+.breadcrumb a:hover{color:var(--emerald)}
+
+/* ── 記事ヘッダー ── */
+.article-header{padding:20px 0 28px}
+.category-badge{display:inline-block;background:var(--emerald-light);color:#005740;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.article-h1{font-family:'Zen Kaku Gothic New',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:900;color:var(--ink);line-height:1.3;letter-spacing:-0.02em;margin-bottom:14px}
+.article-subcopy{display:inline-block;background:var(--amber-light);color:#7A4D00;font-size:14px;font-weight:700;padding:8px 16px;border-radius:8px;line-height:1.6}
+
+/* ── 図解画像（主役） ── */
+.zukai-wrap{text-align:center;margin:28px 0}
+.zukai-wrap img{max-width:600px;width:100%;height:auto;display:block;margin:0 auto;border-radius:var(--r-lg);box-shadow:0 12px 40px rgba(11,20,38,0.12);border:1px solid var(--border)}
+
+/* ── 保存版バナー ── */
+.save-banner{background:var(--navy);color:#fff;font-size:13px;font-weight:700;text-align:center;padding:10px 16px;border-radius:var(--r);margin:20px 0;display:flex;align-items:center;justify-content:center;gap:8px}
+.save-banner .pin{color:var(--emerald)}
+
+/* ── 一言結論ボックス ── */
+.conclusion-box{background:var(--emerald-light);border:1px solid rgba(0,200,150,0.3);border-radius:var(--r-lg);padding:18px 22px;margin:20px 0;font-size:15px;font-weight:700;color:#005740;line-height:1.7}
+
+/* ── 3行要約ボックス ── */
+.summary-box{background:var(--navy);border-radius:var(--r-lg);padding:22px 24px;margin:20px 0 36px}
+.summary-box-title{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:12px;text-transform:uppercase}
+.summary-row{display:flex;gap:10px;color:rgba(255,255,255,0.88);font-size:14px;line-height:1.7;margin-bottom:8px}
+.summary-row:last-child{margin-bottom:0}
+.summary-num{color:var(--emerald);font-weight:900;flex-shrink:0}
+
+/* ── 基本情報テーブル ── */
+.compare-table{width:100%;border-collapse:collapse;margin:28px 0 36px;font-size:14px;background:var(--surface);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 4px 16px rgba(11,20,38,0.06)}
+.compare-table caption{background:var(--navy);color:#fff;font-weight:900;font-size:15px;padding:14px;font-family:'Zen Kaku Gothic New',sans-serif}
+.compare-table th,.compare-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.compare-table th{background:var(--navy-mid);color:#fff;font-weight:700;width:32%}
+.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:none}
+.compare-table td{color:var(--ink2)}
+.compare-table a{color:var(--emerald);font-weight:700;text-decoration:none}
+.compare-table a:hover{text-decoration:underline}
+
+/* ── 本文セクション ── */
+.content-section{margin:40px 0}
+.content-h2{font-family:'Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:14px;padding-left:14px;border-left:4px solid var(--emerald)}
+.content-h3{font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;font-weight:900;color:var(--ink2);margin:22px 0 10px;padding-left:12px;border-left:3px solid var(--amber)}
+.content-section p{font-size:15px;color:var(--ink2);line-height:1.9;margin-bottom:14px}
+
+/* ── FAQ アコーディオン ── */
+.faq-list{display:flex;flex-direction:column;gap:10px;margin:20px 0 40px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.faq-item summary{padding:16px 18px;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:10px;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::before{content:'Q';flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--emerald);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.faq-item[open] summary::before{background:var(--navy)}
+.faq-answer{padding:0 18px 16px 50px;font-size:13.5px;color:var(--ink2);line-height:1.8}
+
+/* ── 末尾CTA（1本のみ） ── */
+.final-cta{background:linear-gradient(140deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:var(--r-lg);padding:32px 26px;margin:40px 0;text-align:center}
+.final-cta-eyebrow{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:10px;text-transform:uppercase}
+.final-cta-title{font-family:'Zen Kaku Gothic New',sans-serif;color:#fff;font-size:18px;font-weight:900;margin-bottom:20px;line-height:1.5}
+.final-cta-list{display:flex;flex-direction:column;gap:8px}
+.final-cta-link{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;padding:13px 18px;border-radius:var(--r);text-align:left;display:flex;align-items:center;justify-content:space-between;transition:background .15s}
+.final-cta-link:hover{background:rgba(0,200,150,0.18);border-color:var(--emerald)}
+.final-cta-link.primary{background:var(--emerald);color:var(--navy);border-color:var(--emerald)}
+.final-cta-link.primary:hover{opacity:.9}
+
+/* ── フッター ── */
+.footer{background:var(--navy);padding:32px 24px;text-align:center;margin-top:48px}
+.footer-text{color:rgba(255,255,255,0.4);font-size:12px}
+.footer-links{display:flex;gap:16px;justify-content:center;margin-bottom:14px}
+.footer-links a{color:rgba(255,255,255,0.6);font-size:12px;text-decoration:none}
+
+@media(max-width:480px){
+  .article-header{padding:16px 0 22px}
+  .compare-table{font-size:12.5px}
+  .compare-table th,.compare-table td{padding:10px 10px}
+  .compare-table th{width:36%}
+}
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="header">
+  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<span>図解</span>ラボ</a>
+  <nav class="header-nav">
+    <a href="/ai/" class="nav-link">AI</a>
+    <a href="/efficiency/" class="nav-link">業務効率化</a>
+    <a href="/compare/" class="nav-link">比較</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- パンくず -->
+  <nav class="breadcrumb">
+    <a href="/">ホーム</a> &gt; <a href="/ai/">AI</a> &gt; Geminiとは？
+  </nav>
+
+  <!-- 記事ヘッダー -->
+  <article>
+    <header class="article-header">
+      <span class="category-badge">AI・生成AI</span>
+      <h1 class="article-h1">Geminiとは？</h1>
+      <p class="article-subcopy">【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説</p>
+    </header>
+
+    <!-- 図解画像（主役） -->
+    <div class="zukai-wrap">
+      <img src="/images/gemini-zukai-explanation.png"
+           alt="Geminiの仕組みを図解したイラスト。定義・仕組み・メリット・活用例・注意点・まとめの6項目を解説"
+           width="1080" height="1350" loading="eager">
+    </div>
+
+    <!-- 保存版バナー -->
+    <div class="save-banner"><span class="pin">📌</span> 保存版｜あとで見返したい人はブックマーク推奨</div>
+
+    <!-- 一言結論ボックス -->
+    <div class="conclusion-box">
+      Geminiとは、Googleが開発した高性能なAIチャットサービス。最新情報に強く検索と連携できる上、画像・音声・動画も理解できる点が特徴です。
+    </div>
+
+    <!-- 3行要約ボックス -->
+    <div class="summary-box">
+      <div class="summary-box-title">30秒でわかる要約</div>
+      <div class="summary-row"><span class="summary-num">①</span>GeminiはGoogleが開発した対話AI</div>
+      <div class="summary-row"><span class="summary-num">②</span>検索連携で最新情報に強く、画像・音声・動画も理解できる</div>
+      <div class="summary-row"><span class="summary-num">③</span>Googleサービスとの連携作業に使える</div>
+    </div>
+
+    <!-- 基本情報テーブル -->
+    <table class="compare-table">
+      <caption>Gemini 基本情報</caption>
+      <tbody>
+        <tr><th>サービス名</th><td>Gemini</td></tr>
+        <tr><th>開発元</th><td>Google</td></tr>
+        <tr><th>料金</th><td>無料プランあり（有料プランあり）</td></tr>
+        <tr><th>対応言語</th><td>日本語を含む多言語に対応</td></tr>
+        <tr><th>主な機能</th><td>文章作成、要約、質問回答、画像・音声・動画の理解、コード作成</td></tr>
+        <tr><th>画像生成</th><td>可能</td></tr>
+        <tr><th>コード作成</th><td>可能（プログラミング支援）</td></tr>
+        <tr><th>スマホ利用</th><td>可能（iOS / Android アプリ・ブラウザ）</td></tr>
+        <tr><th>Webサイト</th><td><a href="https://gemini.google.com" rel="nofollow noopener" target="_blank">https://gemini.google.com</a></td></tr>
+        <tr><th>セキュリティ・プライバシー</th><td>Googleのプライバシーポリシーに準拠</td></tr>
+        <tr><th>おすすめ用途</th><td>文章作成、最新情報の検索、画像・動画の理解、Google連携作業</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ①定義 -->
+    <section class="content-section">
+      <h2 class="content-h2">Geminiとは（定義）</h2>
+      <p>Geminiとは、Googleが開発した対話型のAI（人工知能）サービスです。チャット画面に質問や指示を入力するだけで、AIが自然な文章で回答してくれます。</p>
+      <p>Google検索と連携できるため最新情報に強く、画像・音声・動画など文章以外の情報も理解できる点が特徴です。Googleのサービスとも連携しやすく、いろいろな情報を理解して作業を手伝ってくれるAIアシスタントとして利用されています。</p>
+    </section>
+
+    <!-- ②仕組み -->
+    <section class="content-section">
+      <h2 class="content-h2">Geminiの仕組み</h2>
+      <p>Geminiは、大量のデータを学習した「大規模言語モデル」という技術をもとに動いています。質問や指示を入力すると、AIがその内容を理解し、必要に応じてGoogle検索の情報も踏まえながら回答を組み立てて表示します。</p>
+      <p>人間のように「考えて答えている」わけではなく、学習したパターンや検索結果から最適な文章を生成している、という点を理解しておくと使い方の幅が広がります。</p>
+    </section>
+
+    <!-- ③できること／できないこと -->
+    <section class="content-section">
+      <h2 class="content-h2">Geminiでできること</h2>
+      <p>Geminiは機能ベースで見ると、主に次のようなことができます。</p>
+      <p><strong>文章作成：</strong>メール・記事・企画書などの下書きを短時間で作成できます。<br>
+      <strong>学習・調べもの：</strong>質問に答えたり、内容をわかりやすく解説してくれます。<br>
+      <strong>資料作成・要約：</strong>資料の要約やポイント整理に活用できます。<br>
+      <strong>マルチモーダル対応：</strong>画像・音声・動画などさまざまな情報を理解できます。</p>
+
+      <h3 class="content-h3">Geminiでできないこと</h3>
+      <p>一方で、次のようなことには対応できない、または注意が必要です。<br>
+      <strong>感情を持った判断：</strong>人間のように感情や責任を持って物事を判断することはできません。<br>
+      <strong>100％正確な保証：</strong>回答に誤りが含まれる可能性があるため、重要な内容は自分でも確認が必要です。<br>
+      <strong>機密情報の代行管理：</strong>パスワードや個人情報の管理を任せる用途には向いていません。</p>
+    </section>
+
+    <!-- ④活用例 -->
+    <section class="content-section">
+      <h2 class="content-h2">Geminiの活用例</h2>
+      <p>実際にどんな人がどう使っているか、人物別に見てみましょう。</p>
+      <p><strong>会社員：</strong>メール作成や企画書の下書き、資料の要約に活用されています。<br>
+      <strong>学生：</strong>学習内容の質問やわからないことの解説に使われています。<br>
+      <strong>Google Workspaceユーザー：</strong>GmailやドライブなどとスムーズにAIを連携させて活用されています。<br>
+      <strong>調べもの好きな人：</strong>検索と連携した最新情報の収集に使われています。<br>
+      <strong>エンジニア：</strong>コード生成やエラーの解決のサポートに活用されています。</p>
+    </section>
+
+    <!-- ⑤注意点 -->
+    <section class="content-section">
+      <h2 class="content-h2">Geminiの注意点</h2>
+      <p>便利な一方で、使う際に知っておきたい注意点もあります。</p>
+      <p><strong>①情報は確認する：</strong>AIの回答は間違っている場合もあるため、重要な情報は自分で確認しましょう。<br>
+      <strong>②個人情報を入力しない：</strong>名前・住所・電話番号などの個人情報や機密情報は入力しないようにしましょう。<br>
+      <strong>③最終判断は自分で行う：</strong>重要事項については、参考情報として活用しつつ自分で確認しましょう。<br>
+      <strong>④著作権に注意する：</strong>生成された文章や画像を使う際は、著作権や利用規約を確認しましょう。</p>
+    </section>
+
+    <!-- ⑥まとめ -->
+    <section class="content-section">
+      <h2 class="content-h2">まとめ</h2>
+      <p>Geminiは、最新情報に強く、さまざまな情報を理解できる身近なAIです。Googleサービスと連携しながら、調べもの・学習・文章作成など、さまざまな場面で時間と手間を減らす助けになります。回答は必ず自分で確認し、安全に使うという注意点を守りながら活用することで、日常や仕事における強力なパートナーとして役立てることができます。</p>
+    </section>
+
+    <!-- FAQ 15問 -->
+    <section class="content-section">
+      <h2 class="content-h2">よくある質問</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Geminiとは何ですか？</summary>
+          <p class="faq-answer">Geminiは、Googleが開発した文章で会話できるAIサービスです。質問や相談に対して自然な文章で答えてくれます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiは無料で使えますか？</summary>
+          <p class="faq-answer">無料プランがあり、基本的な機能は無料で利用できます。より高度な機能を使いたい場合は有料プランが用意されています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiにはどんな種類がありますか？</summary>
+          <p class="faq-answer">無料版のほか、個人向け・法人向けなど用途に応じたプランがあります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiの回答は必ず正しいですか？</summary>
+          <p class="faq-answer">いいえ。AIの回答は間違っていることもあるため、重要な情報は自分で確認することが大切です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiに個人情報を入力しても大丈夫ですか？</summary>
+          <p class="faq-answer">名前・住所・電話番号などの個人情報は入力しないことをおすすめします。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiはスマホでも使えますか？</summary>
+          <p class="faq-answer">はい。公式アプリやブラウザから、スマホでも問題なく利用できます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiは日本語に対応していますか？</summary>
+          <p class="faq-answer">はい。日本語の質問にも自然な日本語で回答してくれます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiは何ができますか？</summary>
+          <p class="faq-answer">調べもの、文章作成、要約、画像・音声・動画の理解、アイデア出しなど幅広い用途に使えます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiにできないことはありますか？</summary>
+          <p class="faq-answer">すべての回答が常に正確とは限らず、感情を持って判断することもできません。重要な内容は自分でも確認しましょう。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiを使うのに専門知識は必要ですか？</summary>
+          <p class="faq-answer">不要です。話しかけるように質問するだけで使えるため、初心者でも問題ありません。</p>
+        </details>
+        <details class="faq-item">
+          <summary>GeminiはGoogleのサービスと連携できますか？</summary>
+          <p class="faq-answer">はい。GmailやGoogleドライブなど、Googleのサービスとスムーズに連携できる点が特徴です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiで作った文章は商用利用できますか？</summary>
+          <p class="faq-answer">多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiはどんな仕組みで回答していますか？</summary>
+          <p class="faq-answer">大量のデータを学習したAIが、質問の内容を理解し、最新の検索結果なども踏まえて回答を文章として生成しています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiを使うと作業時間は短縮できますか？</summary>
+          <p class="faq-answer">はい。文章作成や調べものなどの時間を大きく短縮できるケースが多いです。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geminiを使い始めるにはどうすればいいですか？</summary>
+          <p class="faq-answer">Googleアカウントがあれば、公式サイトやアプリからすぐに使い始めることができます。</p>
+        </details>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<!-- フッター -->
+<footer class="footer">
+  <p class="footer-text">© 2026 AI図解ラボ</p>
+</footer>
+
+</body>
+</html>
