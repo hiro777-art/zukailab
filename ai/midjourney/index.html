@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midjourneyとは？【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説 | AI図解ラボ</title>
+<meta name="description" content="Midjourneyとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+
+<meta property="og:title" content="Midjourneyとは？【30秒でわかる図解】 | AI図解ラボ">
+<meta property="og:description" content="Midjourneyとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+<meta property="og:image" content="/images/midjourney-zukai-explanation.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Midjourneyとは？仕組み・できること・使い方を初心者向け解説",
+  "image": "https://zukailab.com/images/midjourney-zukai-explanation.png",
+  "author": {"@type": "Person", "name": "Hiro"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI図解ラボ",
+    "logo": {"@type": "ImageObject", "url": "https://zukailab.com/images/logo.png"}
+  },
+  "datePublished": "2026-06-21",
+  "dateModified": "2026-06-21",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://zukailab.com/ai/midjourney/"},
+  "description": "Midjourneyとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://zukailab.com/"},
+    {"@type": "ListItem", "position": 2, "name": "AI", "item": "https://zukailab.com/ai/"},
+    {"@type": "ListItem", "position": 3, "name": "Midjourneyとは？"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Midjourneyとは何ですか？","acceptedAnswer": {"@type": "Answer","text": "Midjourneyは、文章（プロンプト）を入力するだけで高品質な画像を自動生成できるAIツールです。デザインの専門知識がなくても、イメージ通りの画像を作成できます。"}},
+    {"@type": "Question","name": "Midjourneyは無料で使えますか？","acceptedAnswer": {"@type": "Answer","text": "いいえ。2026年時点で無料プランや無料トライアルは提供されておらず、利用するには必ず有料プラン（Basic以上）への加入が必要です。"}},
+    {"@type": "Question","name": "Midjourneyの料金プランにはどんな種類がありますか？","acceptedAnswer": {"@type": "Answer","text": "Basic（月10ドル）・Standard（月30ドル）・Pro（月60ドル）・Megaプラン（月120ドル）の4種類があります。年払いにすると割引が適用されます。"}},
+    {"@type": "Question","name": "Midjourneyで作った画像は誰でも見られますか？","acceptedAnswer": {"@type": "Answer","text": "Basic・Standardプランで生成した画像は、原則としてMidjourneyの公開ギャラリーに表示されます。非公開にしたい場合はProプラン以上のステルスモードが必要です。"}},
+    {"@type": "Question","name": "Midjourneyは日本語に対応していますか？","acceptedAnswer": {"@type": "Answer","text": "画面（UI）は日本語に対応していません。プロンプト自体は日本語で入力できますが、英語の方が精度の高い画像が生成されやすいです。"}},
+    {"@type": "Question","name": "Midjourneyの回答は必ず正しいですか？","acceptedAnswer": {"@type": "Answer","text": "生成される画像は指示通りに仕上がらない場合もあり、何度か調整が必要になることがあります。重要な用途では仕上がりを必ず確認しましょう。"}},
+    {"@type": "Question","name": "Midjourneyに個人情報を入力しても大丈夫ですか？","acceptedAnswer": {"@type": "Answer","text": "個人情報や機密情報をプロンプトに含めることは避けましょう。生成画像が公開される可能性があるため注意が必要です。"}},
+    {"@type": "Question","name": "Midjourneyはスマホでも使えますか？","acceptedAnswer": {"@type": "Answer","text": "はい。Webブラウザ版（midjourney.com）であればスマホからも利用できます。"}},
+    {"@type": "Question","name": "Midjourneyは何ができますか？","acceptedAnswer": {"@type": "Answer","text": "SNS投稿用の画像、ブログ・記事の挿絵、商品イメージ画像、プレゼン資料のビジュアル、創作・趣味のイラストなどを作成できます。"}},
+    {"@type": "Question","name": "Midjourneyにできないことはありますか？","acceptedAnswer": {"@type": "Answer","text": "完全な無料利用はできず、また文章作成や複雑なコード生成といったテキスト処理には対応していません。画像生成に特化したツールです。"}},
+    {"@type": "Question","name": "Midjourneyを使うのに専門知識は必要ですか？","acceptedAnswer": {"@type": "Answer","text": "不要です。作りたい画像のイメージを文章で入力するだけで、専門的なデザインスキルがなくても高品質な画像を生成できます。"}},
+    {"@type": "Question","name": "Midjourneyは他の画像生成AIと何が違いますか？","acceptedAnswer": {"@type": "Answer","text": "画像の美しさや表現力の高さに定評があり、特にアート性の高い画像生成を得意としています。一方で完全無料プランがなく、生成画像が公開される点が他ツールとの違いです。"}},
+    {"@type": "Question","name": "Midjourneyで作った画像は商用利用できますか？","acceptedAnswer": {"@type": "Answer","text": "有料プラン加入者であれば商用利用が可能です。ただし年間収益が一定額を超える企業はProプラン以上への加入が必要になるなど、利用規約の確認が必要です。"}},
+    {"@type": "Question","name": "Midjourneyはどんな仕組みで画像を作っていますか？","acceptedAnswer": {"@type": "Answer","text": "入力された文章をAIが理解し、その内容に合った画像を生成して画面に表示する、という流れで動いています。"}},
+    {"@type": "Question","name": "Midjourneyを使い始めるにはどうすればいいですか？","acceptedAnswer": {"@type": "Answer","text": "公式サイト（midjourney.com）でアカウントを作成し、有料プランに加入することで利用を開始できます。"}}
+  ]
+}
+</script>
+
+<style>
+:root{
+  --ink:#0B1426;
+  --ink2:#3D4F6A;
+  --ink3:#7A8C9E;
+  --bg:#F8F9FC;
+  --surface:#FFFFFF;
+  --navy:#0B1426;
+  --navy-mid:#1A2E4A;
+  --emerald:#00C896;
+  --emerald-dim:#00C89620;
+  --emerald-light:#E6FAF5;
+  --purple:#6C63FF;
+  --purple-light:#F0EFFF;
+  --amber:#F5A623;
+  --amber-light:#FEF6E7;
+  --red:#E5484D;
+  --red-light:#FDECEC;
+  --border:rgba(11,20,38,0.09);
+  --r:10px;
+  --r-lg:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+
+.header{background:var(--navy);position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 1px 0 rgba(0,200,150,0.15)}
+.logo{font-family:'Zen Kaku Gothic New',sans-serif;font-size:19px;font-weight:900;color:#fff;letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:6px}
+.logo-mark{width:26px;height:26px;background:var(--emerald);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.logo span{color:var(--emerald)}
+.header-nav{margin-left:auto;display:flex;gap:2px;align-items:center}
+.nav-link{color:rgba(255,255,255,0.65);font-size:13px;text-decoration:none;padding:6px 11px;border-radius:7px;transition:background .15s}
+.nav-link:hover{background:rgba(255,255,255,0.09);color:#fff}
+
+.container{max-width:760px;margin:0 auto;padding:0 24px}
+
+.breadcrumb{font-size:12px;color:var(--ink3);padding:16px 0 0}
+.breadcrumb a{color:var(--ink3);text-decoration:none}
+.breadcrumb a:hover{color:var(--emerald)}
+
+.article-header{padding:20px 0 28px}
+.category-badge{display:inline-block;background:var(--emerald-light);color:#005740;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.article-h1{font-family:'Zen Kaku Gothic New',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:900;color:var(--ink);line-height:1.3;letter-spacing:-0.02em;margin-bottom:14px}
+.article-subcopy{display:inline-block;background:var(--amber-light);color:#7A4D00;font-size:14px;font-weight:700;padding:8px 16px;border-radius:8px;line-height:1.6}
+.publish-date{display:inline-flex;align-items:center;gap:6px;background:#E8F1FB;color:var(--ink2);font-size:13px;font-weight:700;padding:6px 14px;border-radius:8px;margin-top:12px}
+
+.zukai-wrap{text-align:center;margin:28px 0}
+.zukai-wrap img{max-width:600px;width:100%;height:auto;display:block;margin:0 auto;border-radius:var(--r-lg);box-shadow:0 12px 40px rgba(11,20,38,0.12);border:1px solid var(--border)}
+
+.save-banner{background:var(--navy);color:#fff;font-size:13px;font-weight:700;text-align:center;padding:10px 16px;border-radius:var(--r);margin:20px 0;display:flex;align-items:center;justify-content:center;gap:8px}
+.save-banner .pin{color:var(--emerald)}
+
+.conclusion-box{background:var(--emerald-light);border:1px solid rgba(0,200,150,0.3);border-radius:var(--r-lg);padding:18px 22px;margin:20px 0;font-size:15px;font-weight:700;color:#005740;line-height:1.7}
+
+.summary-box{background:var(--navy);border-radius:var(--r-lg);padding:22px 24px;margin:20px 0 36px}
+.summary-box-title{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:12px;text-transform:uppercase}
+.summary-row{display:flex;gap:10px;color:rgba(255,255,255,0.88);font-size:14px;line-height:1.7;margin-bottom:8px}
+.summary-row:last-child{margin-bottom:0}
+.summary-num{color:var(--emerald);font-weight:900;flex-shrink:0}
+
+.compare-table{width:100%;border-collapse:collapse;margin:28px 0 36px;font-size:14px;background:var(--surface);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 4px 16px rgba(11,20,38,0.06)}
+.compare-table caption{background:var(--navy);color:#fff;font-weight:900;font-size:15px;padding:14px;font-family:'Zen Kaku Gothic New',sans-serif}
+.compare-table th,.compare-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.compare-table th{background:var(--navy-mid);color:#fff;font-weight:700;width:32%}
+.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:none}
+.compare-table td{color:var(--ink2)}
+.compare-table a{color:var(--emerald);font-weight:700;text-decoration:none}
+.compare-table a:hover{text-decoration:underline}
+
+.content-section{margin:40px 0}
+.content-h2{font-family:'Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:14px;padding-left:14px;border-left:4px solid var(--emerald)}
+.content-h3{font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;font-weight:900;color:var(--ink2);margin:22px 0 10px;padding-left:12px;border-left:3px solid var(--amber)}
+.content-section p{font-size:15px;color:var(--ink2);line-height:1.9;margin-bottom:14px}
+
+.faq-list{display:flex;flex-direction:column;gap:10px;margin:20px 0 40px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.faq-item summary{padding:16px 18px;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:10px;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::before{content:'Q';flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--emerald);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.faq-item[open] summary::before{background:var(--navy)}
+.faq-answer{padding:0 18px 16px 50px;font-size:13.5px;color:var(--ink2);line-height:1.8}
+
+.footer{background:var(--navy);padding:32px 24px;text-align:center;margin-top:48px}
+.footer-text{color:rgba(255,255,255,0.4);font-size:12px}
+
+@media(max-width:480px){
+  .article-header{padding:16px 0 22px}
+  .compare-table{font-size:12.5px}
+  .compare-table th,.compare-table td{padding:10px 10px}
+  .compare-table th{width:36%}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<span>図解</span>ラボ</a>
+  <nav class="header-nav">
+    <a href="/ai/" class="nav-link">AI</a>
+    <a href="/efficiency/" class="nav-link">業務効率化</a>
+    <a href="/compare/" class="nav-link">比較</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <nav class="breadcrumb">
+    <a href="/">ホーム</a> &gt; <a href="/ai/">AI</a> &gt; Midjourneyとは？
+  </nav>
+
+  <article>
+    <header class="article-header">
+      <span class="category-badge">AI・生成AI</span>
+      <h1 class="article-h1">Midjourneyとは？</h1>
+      <p class="article-subcopy">【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説</p>
+      <div class="publish-date">📅 公開：2026年6月21日</div>
+    </header>
+
+    <div class="zukai-wrap">
+      <img src="/images/midjourney-zukai-explanation.png"
+           alt="Midjourneyの仕組みを図解したイラスト。定義・仕組み・メリット・活用例・注意点・まとめの6項目を解説"
+           width="1080" height="1350" loading="eager">
+    </div>
+
+    <div class="save-banner"><span class="pin">📌</span> 保存版｜あとで見返したい人はブックマーク推奨</div>
+
+    <div class="conclusion-box">
+      Midjourneyとは、文章（プロンプト）を入力するだけで高品質な画像を自動生成できるAIツール。デザインの専門知識がなくても、イメージ通りの画像をすばやく作れるのが特徴です。
+    </div>
+
+    <div class="summary-box">
+      <div class="summary-box-title">30秒でわかる要約</div>
+      <div class="summary-row"><span class="summary-num">①</span>Midjourneyは文章から高品質な画像を生成するAIツール</div>
+      <div class="summary-row"><span class="summary-num">②</span>無料プランはなく、利用には有料プランへの加入が必要</div>
+      <div class="summary-row"><span class="summary-num">③</span>生成画像は公開される仕様のため、機密性の高い用途には注意</div>
+    </div>
+
+    <table class="compare-table">
+      <caption>Midjourney 基本情報</caption>
+      <tbody>
+        <tr><th>サービス名</th><td>Midjourney</td></tr>
+        <tr><th>開発元</th><td>Midjourney, Inc.</td></tr>
+        <tr><th>料金</th><td>無料プランなし／Basic 月10ドル〜Mega 月120ドルの4プラン（年払いで割引あり）</td></tr>
+        <tr><th>対応言語</th><td>UIは英語のみ／プロンプトは日本語入力も可能（英語推奨）</td></tr>
+        <tr><th>主な機能</th><td>テキストからの画像生成、画像編集、Webエディター、動画生成（一部プラン）</td></tr>
+        <tr><th>画像生成</th><td>○（中核機能。最新モデルV7／V8.1に対応）</td></tr>
+        <tr><th>コード作成</th><td>×（画像生成に特化、テキスト・コード生成は非対応）</td></tr>
+        <tr><th>スマホ利用</th><td>○（Webブラウザ版で利用可能）</td></tr>
+        <tr><th>Webサイト</th><td><a href="https://www.midjourney.com" rel="nofollow noopener" target="_blank">https://www.midjourney.com</a></td></tr>
+        <tr><th>セキュリティ・プライバシー</th><td>生成画像は原則公開（Pro以上はステルスモードで非公開化可能）</td></tr>
+        <tr><th>おすすめ用途</th><td>SNS投稿画像、ブログ挿絵、商品イメージ、プレゼン資料、創作・イラスト</td></tr>
+      </tbody>
+    </table>
+
+    <section class="content-section">
+      <h2 class="content-h2">Midjourneyとは（定義）</h2>
+      <p>Midjourneyとは、AIを使って文章から高品質な画像を生成できるツールです。「夕日と海の風景」のように作りたい画像のイメージを文章（プロンプト）で入力するだけで、AIがその内容を理解し、イメージに合った画像を自動で作り出してくれます。</p>
+      <p>デザインの専門知識がなくても、直感的な操作でアート性の高い画像を作成できる点が大きな特徴です。幅広いスタイルに対応しており、写実的な画像からイラスト調まで自由に生成できます。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">Midjourneyの仕組み</h2>
+      <p>Midjourneyは、まず作りたい画像のイメージを文章で入力します。次にAIがその内容を理解し、指示に合った画像を生成します。生成された画像はそのまま画面に表示され、必要に応じて高画質化（アップスケール）や別パターンの生成（バリエーション）も行えます。</p>
+      <p>AIがあなたの言葉を理解し、イメージに合った画像を自動で作り出す、という流れがMidjourneyの基本的な仕組みです。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">Midjourneyでできること</h2>
+      <p>Midjourneyは画像生成において、主に次のようなことができます。</p>
+      <p><strong>SNS投稿用の画像作成：</strong>目を引く画像で投稿を魅力的にできます。<br>
+      <strong>ブログ・記事の挿絵：</strong>記事のアイキャッチや挿絵を手軽に作成できます。<br>
+      <strong>商品イメージ画像：</strong>商品のイメージ画像を手軽に作成できます。<br>
+      <strong>プレゼン資料のビジュアル：</strong>資料の説明をわかりやすくする画像を作れます。</p>
+
+      <h3 class="content-h3">Midjourneyでできないこと</h3>
+      <p>一方で、次のようなことには対応できない、または注意が必要です。<br>
+      <strong>無料での利用：</strong>無料プランや無料トライアルは提供されておらず、利用には必ず有料プラン（Basic以上）への加入が必要です。<br>
+      <strong>生成画像の非公開（標準プランの場合）：</strong>Basic・Standardプランで生成した画像は、原則として公開ギャラリーに表示されます。非公開にするにはPro以上のステルスモードが必要です。<br>
+      <strong>文章作成・コード生成：</strong>画像生成に特化したツールのため、文章作成やプログラミング支援には対応していません。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">Midjourneyの活用例</h2>
+      <p>実際にどんな人がどう使っているか、人物別に見てみましょう。</p>
+      <p><strong>SNS運用者：</strong>投稿を目立たせるための画像作成に活用されています。<br>
+      <strong>ブロガー・ライター：</strong>記事の挿絵やアイキャッチ画像の作成に使われています。<br>
+      <strong>ECサイト運営者：</strong>商品のイメージ画像を手軽に作成するのに活用されています。<br>
+      <strong>企画・プレゼン担当者：</strong>資料のビジュアルをわかりやすくするために使われています。<br>
+      <strong>イラストレーター・クリエイター：</strong>創作・趣味のアート制作に活用されています。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">Midjourneyの注意点</h2>
+      <p>便利な一方で、使う際に知っておきたい注意点もあります。</p>
+      <p><strong>①情報の確認：</strong>AIの生成結果は指示通りに仕上がらない場合もあるため、必ず確認しましょう。<br>
+      <strong>②個人情報の保護：</strong>個人情報や機密情報をプロンプトに含めないようにしましょう。<br>
+      <strong>③回答の検証：</strong>生成された内容が意図と合っているかチェックしましょう。<br>
+      <strong>④著作権の確認：</strong>商用利用の際は著作権や利用ルールを確認しましょう。<br>
+      <strong>⑤公開設定：</strong>生成画像はWeb上で公開される仕様です。機密性の高い内容を扱う場合は注意しましょう。<br>
+      <strong>⑥料金体系：</strong>利用には有料プランへの加入が必要です（無料体験は現在ありません）。「無料で試せる」という他のAIツールとは前提が異なる点に注意しましょう。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">まとめ</h2>
+      <p>Midjourneyは、文章から高品質な画像を作成できるAIツールです。専門知識がなくても、SNS投稿や資料作成、創作活動など幅広い場面で活用できます。ただし、無料プランがなく、生成画像が公開される仕様である点には注意が必要です。料金体系とルールを理解した上で使えば、初心者でも安心してあなたの想像力をカタチにできる心強いツールになってくれるはずです。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">よくある質問</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Midjourneyとは何ですか？</summary>
+          <p class="faq-answer">Midjourneyは、文章（プロンプト）を入力するだけで高品質な画像を自動生成できるAIツールです。デザインの専門知識がなくても、イメージ通りの画像を作成できます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyは無料で使えますか？</summary>
+          <p class="faq-answer">いいえ。2026年時点で無料プランや無料トライアルは提供されておらず、利用するには必ず有料プラン（Basic以上）への加入が必要です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyの料金プランにはどんな種類がありますか？</summary>
+          <p class="faq-answer">Basic（月10ドル）・Standard（月30ドル）・Pro（月60ドル）・Megaプラン（月120ドル）の4種類があります。年払いにすると割引が適用されます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyで作った画像は誰でも見られますか？</summary>
+          <p class="faq-answer">Basic・Standardプランで生成した画像は、原則としてMidjourneyの公開ギャラリーに表示されます。非公開にしたい場合はProプラン以上のステルスモードが必要です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyは日本語に対応していますか？</summary>
+          <p class="faq-answer">画面（UI）は日本語に対応していません。プロンプト自体は日本語で入力できますが、英語の方が精度の高い画像が生成されやすいです。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyの回答は必ず正しいですか？</summary>
+          <p class="faq-answer">生成される画像は指示通りに仕上がらない場合もあり、何度か調整が必要になることがあります。重要な用途では仕上がりを必ず確認しましょう。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyに個人情報を入力しても大丈夫ですか？</summary>
+          <p class="faq-answer">個人情報や機密情報をプロンプトに含めることは避けましょう。生成画像が公開される可能性があるため注意が必要です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyはスマホでも使えますか？</summary>
+          <p class="faq-answer">はい。Webブラウザ版（midjourney.com）であればスマホからも利用できます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyは何ができますか？</summary>
+          <p class="faq-answer">SNS投稿用の画像、ブログ・記事の挿絵、商品イメージ画像、プレゼン資料のビジュアル、創作・趣味のイラストなどを作成できます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyにできないことはありますか？</summary>
+          <p class="faq-answer">完全な無料利用はできず、また文章作成や複雑なコード生成といったテキスト処理には対応していません。画像生成に特化したツールです。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyを使うのに専門知識は必要ですか？</summary>
+          <p class="faq-answer">不要です。作りたい画像のイメージを文章で入力するだけで、専門的なデザインスキルがなくても高品質な画像を生成できます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyは他の画像生成AIと何が違いますか？</summary>
+          <p class="faq-answer">画像の美しさや表現力の高さに定評があり、特にアート性の高い画像生成を得意としています。一方で完全無料プランがなく、生成画像が公開される点が他ツールとの違いです。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyで作った画像は商用利用できますか？</summary>
+          <p class="faq-answer">有料プラン加入者であれば商用利用が可能です。ただし年間収益が一定額を超える企業はProプラン以上への加入が必要になるなど、利用規約の確認が必要です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyはどんな仕組みで画像を作っていますか？</summary>
+          <p class="faq-answer">入力された文章をAIが理解し、その内容に合った画像を生成して画面に表示する、という流れで動いています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>Midjourneyを使い始めるにはどうすればいいですか？</summary>
+          <p class="faq-answer">公式サイト（midjourney.com）でアカウントを作成し、有料プランに加入することで利用を開始できます。</p>
+        </details>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<footer class="footer">
+  <p class="footer-text">© 2026 AI図解ラボ</p>
+</footer>
+
+</body>
+</html>
