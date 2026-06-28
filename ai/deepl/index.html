@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepLとは？【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説 | AI図解ラボ</title>
+<meta name="description" content="DeepLとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+
+<meta property="og:title" content="DeepLとは？【30秒でわかる図解】 | AI図解ラボ">
+<meta property="og:description" content="DeepLとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+<meta property="og:image" content="/images/deepl-zukai-explanation.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DeepLとは？仕組み・できること・使い方を初心者向け解説",
+  "image": "https://zukailab.com/images/deepl-zukai-explanation.png",
+  "author": {"@type": "Person", "name": "Hiro"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI図解ラボ",
+    "logo": {"@type": "ImageObject", "url": "https://zukailab.com/images/logo.png"}
+  },
+  "datePublished": "2026-06-28",
+  "dateModified": "2026-06-28",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://zukailab.com/ai/deepl/"},
+  "description": "DeepLとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://zukailab.com/"},
+    {"@type": "ListItem", "position": 2, "name": "AI", "item": "https://zukailab.com/ai/"},
+    {"@type": "ListItem", "position": 3, "name": "DeepLとは？"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "DeepLとは何ですか？","acceptedAnswer": {"@type": "Answer","text": "DeepLは、AIを使って自然で高精度な翻訳を行えるオンライン翻訳ツールです。文脈を理解した、読みやすく自然な訳文を生成できます。"}},
+    {"@type": "Question","name": "DeepLは無料で使えますか？","acceptedAnswer": {"@type": "Answer","text": "はい。無料プランで基本的なテキスト翻訳が利用できます。ただし文字数やファイル翻訳の回数に制限があり、本格的に使うには有料プランへの加入がおすすめです。"}},
+    {"@type": "Question","name": "DeepLの無料版で注意することはありますか？","acceptedAnswer": {"@type": "Answer","text": "無料版に入力したデータは保持・処理される場合があります。個人情報や機密情報を含む文章の入力は避けましょう。"}},
+    {"@type": "Question","name": "DeepLの有料プランにはどんな種類がありますか？","acceptedAnswer": {"@type": "Answer","text": "個人向けからチーム・法人向けまで複数のプランが用意されています。プランが上がるほど翻訳できる文字数やファイル形式、セキュリティ機能が充実します。"}},
+    {"@type": "Question","name": "DeepLは日本語に対応していますか？","acceptedAnswer": {"@type": "Answer","text": "はい。日本語を含む多くの言語に対応しており、特に日本語と英語間の翻訳の自然さに定評があります。"}},
+    {"@type": "Question","name": "DeepLの翻訳結果は必ず正しいですか？","acceptedAnswer": {"@type": "Answer","text": "いいえ。AIによる翻訳のため誤りが含まれる場合もあります。重要な文書は別の情報源でも翻訳結果を確認することが大切です。"}},
+    {"@type": "Question","name": "DeepLに個人情報を入力しても大丈夫ですか？","acceptedAnswer": {"@type": "Answer","text": "機密情報や個人情報は入力しないようにしましょう。特に無料版では入力データがAIの学習に利用される可能性があるため注意が必要です。"}},
+    {"@type": "Question","name": "DeepLはスマホでも使えますか？","acceptedAnswer": {"@type": "Answer","text": "はい。ブラウザ版に加えて、スマホアプリやデスクトップアプリからも利用できます。"}},
+    {"@type": "Question","name": "DeepLは何ができますか？","acceptedAnswer": {"@type": "Answer","text": "ビジネス文書の翻訳、ECサイトの商品説明の翻訳、論文や資料の翻訳、海外旅行時の案内・メニューの翻訳、日常的なSNS・チャットの翻訳などに使えます。"}},
+    {"@type": "Question","name": "DeepLにできないことはありますか？","acceptedAnswer": {"@type": "Answer","text": "無料版では文字数やファイル翻訳の回数に制限があり、また100％正確な翻訳を保証するものではありません。重要な内容は人の目での確認が必要です。"}},
+    {"@type": "Question","name": "DeepLを使うのに専門知識は必要ですか？","acceptedAnswer": {"@type": "Answer","text": "不要です。翻訳したい文章を入力するだけで、AIが文脈を理解して自然な訳文を生成してくれます。"}},
+    {"@type": "Question","name": "DeepLは他の翻訳ツールと何が違いますか？","acceptedAnswer": {"@type": "Answer","text": "文脈を踏まえた自然な訳文に定評があり、機械的な直訳ではなく人が書いたような表現に翻訳される点が大きな特徴です。"}},
+    {"@type": "Question","name": "DeepLで翻訳した文章は商用利用できますか？","acceptedAnswer": {"@type": "Answer","text": "翻訳した文章自体の利用には、元の文章の著作権や利用規約の確認が必要です。最終的な利用判断は自分で行いましょう。"}},
+    {"@type": "Question","name": "DeepLはどんな仕組みで翻訳していますか？","acceptedAnswer": {"@type": "Answer","text": "入力された文章をAIが文脈や意味を理解し、最適で自然な翻訳を生成して画面に表示する、という流れで動いています。"}},
+    {"@type": "Question","name": "DeepLを使い始めるにはどうすればいいですか？","acceptedAnswer": {"@type": "Answer","text": "公式サイトにアクセスし、翻訳したい文章を入力するだけで、会員登録なしでもすぐに利用を開始できます。"}}
+  ]
+}
+</script>
+
+<style>
+:root{
+  --ink:#0B1426;
+  --ink2:#3D4F6A;
+  --ink3:#7A8C9E;
+  --bg:#F8F9FC;
+  --surface:#FFFFFF;
+  --navy:#0B1426;
+  --navy-mid:#1A2E4A;
+  --emerald:#00C896;
+  --emerald-dim:#00C89620;
+  --emerald-light:#E6FAF5;
+  --purple:#6C63FF;
+  --purple-light:#F0EFFF;
+  --amber:#F5A623;
+  --amber-light:#FEF6E7;
+  --red:#E5484D;
+  --red-light:#FDECEC;
+  --border:rgba(11,20,38,0.09);
+  --r:10px;
+  --r-lg:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+
+.header{background:var(--navy);position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 1px 0 rgba(0,200,150,0.15)}
+.logo{font-family:'Zen Kaku Gothic New',sans-serif;font-size:19px;font-weight:900;color:#fff;letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:6px}
+.logo-mark{width:26px;height:26px;background:var(--emerald);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.logo span{color:var(--emerald)}
+.header-nav{margin-left:auto;display:flex;gap:2px;align-items:center}
+.nav-link{color:rgba(255,255,255,0.65);font-size:13px;text-decoration:none;padding:6px 11px;border-radius:7px;transition:background .15s}
+.nav-link:hover{background:rgba(255,255,255,0.09);color:#fff}
+
+.container{max-width:760px;margin:0 auto;padding:0 24px}
+
+.breadcrumb{font-size:12px;color:var(--ink3);padding:16px 0 0}
+.breadcrumb a{color:var(--ink3);text-decoration:none}
+.breadcrumb a:hover{color:var(--emerald)}
+
+.article-header{padding:20px 0 28px}
+.category-badge{display:inline-block;background:var(--emerald-light);color:#005740;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.article-h1{font-family:'Zen Kaku Gothic New',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:900;color:var(--ink);line-height:1.3;letter-spacing:-0.02em;margin-bottom:14px}
+.article-subcopy{display:inline-block;background:var(--amber-light);color:#7A4D00;font-size:14px;font-weight:700;padding:8px 16px;border-radius:8px;line-height:1.6}
+.publish-date{display:inline-flex;align-items:center;gap:6px;background:#E8F1FB;color:var(--ink2);font-size:13px;font-weight:700;padding:6px 14px;border-radius:8px;margin-top:12px}
+
+.zukai-wrap{text-align:center;margin:28px 0}
+.zukai-wrap img{max-width:600px;width:100%;height:auto;display:block;margin:0 auto;border-radius:var(--r-lg);box-shadow:0 12px 40px rgba(11,20,38,0.12);border:1px solid var(--border)}
+
+.save-banner{background:var(--navy);color:#fff;font-size:13px;font-weight:700;text-align:center;padding:10px 16px;border-radius:var(--r);margin:20px 0;display:flex;align-items:center;justify-content:center;gap:8px}
+.save-banner .pin{color:var(--emerald)}
+
+.conclusion-box{background:var(--emerald-light);border:1px solid rgba(0,200,150,0.3);border-radius:var(--r-lg);padding:18px 22px;margin:20px 0;font-size:15px;font-weight:700;color:#005740;line-height:1.7}
+
+.summary-box{background:var(--navy);border-radius:var(--r-lg);padding:22px 24px;margin:20px 0 36px}
+.summary-box-title{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:12px;text-transform:uppercase}
+.summary-row{display:flex;gap:10px;color:rgba(255,255,255,0.88);font-size:14px;line-height:1.7;margin-bottom:8px}
+.summary-row:last-child{margin-bottom:0}
+.summary-num{color:var(--emerald);font-weight:900;flex-shrink:0}
+
+.compare-table{width:100%;border-collapse:collapse;margin:28px 0 36px;font-size:14px;background:var(--surface);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 4px 16px rgba(11,20,38,0.06)}
+.compare-table caption{background:var(--navy);color:#fff;font-weight:900;font-size:15px;padding:14px;font-family:'Zen Kaku Gothic New',sans-serif}
+.compare-table th,.compare-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.compare-table th{background:var(--navy-mid);color:#fff;font-weight:700;width:32%}
+.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:none}
+.compare-table td{color:var(--ink2)}
+.compare-table a{color:var(--emerald);font-weight:700;text-decoration:none}
+.compare-table a:hover{text-decoration:underline}
+
+.content-section{margin:40px 0}
+.content-h2{font-family:'Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:14px;padding-left:14px;border-left:4px solid var(--emerald)}
+.content-h3{font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;font-weight:900;color:var(--ink2);margin:22px 0 10px;padding-left:12px;border-left:3px solid var(--amber)}
+.content-section p{font-size:15px;color:var(--ink2);line-height:1.9;margin-bottom:14px}
+
+.faq-list{display:flex;flex-direction:column;gap:10px;margin:20px 0 40px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.faq-item summary{padding:16px 18px;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:10px;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::before{content:'Q';flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--emerald);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.faq-item[open] summary::before{background:var(--navy)}
+.faq-answer{padding:0 18px 16px 50px;font-size:13.5px;color:var(--ink2);line-height:1.8}
+
+.footer{background:var(--navy);padding:32px 24px;text-align:center;margin-top:48px}
+.footer-text{color:rgba(255,255,255,0.4);font-size:12px}
+
+@media(max-width:480px){
+  .article-header{padding:16px 0 22px}
+  .compare-table{font-size:12.5px}
+  .compare-table th,.compare-table td{padding:10px 10px}
+  .compare-table th{width:36%}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<span>図解</span>ラボ</a>
+  <nav class="header-nav">
+    <a href="/ai/" class="nav-link">AI</a>
+    <a href="/efficiency/" class="nav-link">業務効率化</a>
+    <a href="/compare/" class="nav-link">比較</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <nav class="breadcrumb">
+    <a href="/">ホーム</a> &gt; <a href="/ai/">AI</a> &gt; DeepLとは？
+  </nav>
+
+  <article>
+    <header class="article-header">
+      <span class="category-badge">AI・生成AI</span>
+      <h1 class="article-h1">DeepLとは？</h1>
+      <p class="article-subcopy">【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説</p>
+      <div class="publish-date">📅 公開：2026年6月28日</div>
+    </header>
+
+    <div class="zukai-wrap">
+      <img src="/images/deepl-zukai-explanation.png"
+           alt="DeepLの仕組みを図解したイラスト。定義・仕組み・メリット・活用例・注意点・まとめの6項目を解説"
+           width="1080" height="1350" loading="eager">
+    </div>
+
+    <div class="save-banner"><span class="pin">📌</span> 保存版｜あとで見返したい人はブックマーク推奨</div>
+
+    <div class="conclusion-box">
+      DeepLとは、AIを使って自然で高精度な翻訳を行えるオンライン翻訳ツール。文脈を理解した、読みやすく自然な訳文を生成できるのが特徴です。
+    </div>
+
+    <div class="summary-box">
+      <div class="summary-box-title">30秒でわかる要約</div>
+      <div class="summary-row"><span class="summary-num">①</span>DeepLは文脈を理解して自然な翻訳を行うAI翻訳ツール</div>
+      <div class="summary-row"><span class="summary-num">②</span>無料プランがあるが、文字数やファイル翻訳の回数に制限がある</div>
+      <div class="summary-row"><span class="summary-num">③</span>無料版は入力データが保持・処理される場合があり、機密情報の入力は避ける</div>
+    </div>
+
+    <table class="compare-table">
+      <caption>DeepL 基本情報</caption>
+      <tbody>
+        <tr><th>サービス名</th><td>DeepL</td></tr>
+        <tr><th>開発元</th><td>DeepL SE（ドイツ・ケルン）</td></tr>
+        <tr><th>料金</th><td>無料プランあり（文字数・ファイル翻訳に利用制限）／有料プランで制限緩和（個人〜法人向け複数段階）</td></tr>
+        <tr><th>対応言語</th><td>30以上の言語に対応（1000以上の言語ペアに対応）</td></tr>
+        <tr><th>主な機能</th><td>テキスト翻訳、文書ファイル翻訳、文章校正・改善（DeepL Write）</td></tr>
+        <tr><th>画像生成</th><td>×（翻訳・文章改善に特化、画像生成は非対応）</td></tr>
+        <tr><th>コード作成</th><td>×（翻訳・ライティング支援に特化、コード生成は非対応）</td></tr>
+        <tr><th>スマホ利用</th><td>○（スマホアプリ・ブラウザ・デスクトップアプリで利用可能）</td></tr>
+        <tr><th>Webサイト</th><td><a href="https://www.deepl.com" rel="nofollow noopener" target="_blank">https://www.deepl.com</a></td></tr>
+        <tr><th>セキュリティ・プライバシー</th><td>無料版は入力データが保持・処理される場合がある／有料プランはデータ機密保証あり</td></tr>
+        <tr><th>おすすめ用途</th><td>ビジネス文書翻訳、EC・通販の商品説明翻訳、論文・資料翻訳、海外旅行、日常コミュニケーション</td></tr>
+      </tbody>
+    </table>
+
+    <section class="content-section">
+      <h2 class="content-h2">DeepLとは（定義）</h2>
+      <p>DeepLとは、AIを使って自然で高精度な翻訳を行えるオンライン翻訳ツールです。例えば英語の「Thank you very much.」を入力すると、「本当にありがとうございます。」のように、文脈に合った自然な日本語に翻訳してくれます。</p>
+      <p>機械的な直訳ではなく、文脈を正確に理解した上で読みやすい訳文を生成できる点が大きな特徴です。多言語に対応しており、ビジネスから日常会話まで幅広く活用できます。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">DeepLの仕組み</h2>
+      <p>DeepLは、まず翻訳したい文章を入力します。次にAIがその文章の文脈や意味を理解し、最適で自然な翻訳を生成します。生成された翻訳結果はそのまま画面に表示され、訳文をクリックすると別の言い換え表現も確認できます。</p>
+      <p>AIが文脈を理解することで、より自然で正確な翻訳を実現している、という流れがDeepLの基本的な仕組みです。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">DeepLでできること</h2>
+      <p>DeepLは翻訳において、主に次のようなことができます。</p>
+      <p><strong>ビジネス文書の翻訳：</strong>メールや資料の翻訳に活用できます。<br>
+      <strong>EC・通販サイトの翻訳：</strong>商品説明やサイトの翻訳に活用できます。<br>
+      <strong>学習・研究の翻訳：</strong>論文や資料の翻訳に活用できます。<br>
+      <strong>海外旅行での翻訳：</strong>案内やメニューの翻訳に便利です。</p>
+
+      <h3 class="content-h3">DeepLでできないこと</h3>
+      <p>一方で、次のようなことには対応できない、または注意が必要です。<br>
+      <strong>無制限の無料利用：</strong>無料版は文字数やファイル翻訳の回数に制限があり、本格的な業務利用には有料プランへの加入が前提になります。<br>
+      <strong>完全な機密保持（無料版の場合）：</strong>無料版に入力したデータは保持・処理される場合があり、個人情報や機密情報を含む文章の入力は避けることが推奨されています。<br>
+      <strong>100％正確な保証：</strong>AIによる翻訳のため誤りが含まれる場合もあり、重要な文書は別の情報源でも確認が必要です。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">DeepLの活用例</h2>
+      <p>実際にどんな人がどう使っているか、人物別に見てみましょう。</p>
+      <p><strong>会社員：</strong>海外取引先とのメールや資料の翻訳に活用されています。<br>
+      <strong>ECサイト運営者：</strong>商品説明やサイトページの多言語化に使われています。<br>
+      <strong>学生・研究者：</strong>論文や参考資料の翻訳に活用されています。<br>
+      <strong>旅行者：</strong>海外旅行先での案内表示やメニューの翻訳に使われています。<br>
+      <strong>SNSユーザー：</strong>海外の友人とのチャットやSNSのやり取りの翻訳に活用されています。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">DeepLの注意点</h2>
+      <p>便利な一方で、使う際に知っておきたい注意点もあります。</p>
+      <p><strong>①情報の確認：</strong>重要な内容は必ず原文と合わせて確認しましょう。<br>
+      <strong>②個人情報の保護：</strong>機密情報や個人情報は入力しないように注意しましょう。<br>
+      <strong>③翻訳結果の検証：</strong>翻訳結果が正しいか別の情報源でも確認しましょう。<br>
+      <strong>④著作権に注意：</strong>翻訳した文章の利用は著作権や利用規約を確認しましょう。<br>
+      <strong>⑤無料版のデータ利用：</strong>無料版は入力データが保持・処理される場合があります。個人情報・機密情報は送信しないようにしましょう。<br>
+      <strong>⑥プランによる制限：</strong>無料版と有料版で利用できる機能や文字数に制限があります。用途に合わせて選びましょう。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">まとめ</h2>
+      <p>DeepLは、AIが文脈を理解し、自然で正確な翻訳を提供してくれるツールです。ビジネスから学習・旅行まで、さまざまな場面で頼れる存在として活用できます。ただし、無料版には文字数の制限があり、入力データが保持・処理される場合がある点には注意が必要です。プランごとの違いとルールを理解した上で使えば、言葉の壁を越えて世界とつながるための心強いツールになってくれるはずです。</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="content-h2">よくある質問</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>DeepLとは何ですか？</summary>
+          <p class="faq-answer">DeepLは、AIを使って自然で高精度な翻訳を行えるオンライン翻訳ツールです。文脈を理解した、読みやすく自然な訳文を生成できます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLは無料で使えますか？</summary>
+          <p class="faq-answer">はい。無料プランで基本的なテキスト翻訳が利用できます。ただし文字数やファイル翻訳の回数に制限があり、本格的に使うには有料プランへの加入がおすすめです。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLの無料版で注意することはありますか？</summary>
+          <p class="faq-answer">無料版に入力したデータは保持・処理される場合があります。個人情報や機密情報を含む文章の入力は避けましょう。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLの有料プランにはどんな種類がありますか？</summary>
+          <p class="faq-answer">個人向けからチーム・法人向けまで複数のプランが用意されています。プランが上がるほど翻訳できる文字数やファイル形式、セキュリティ機能が充実します。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLは日本語に対応していますか？</summary>
+          <p class="faq-answer">はい。日本語を含む多くの言語に対応しており、特に日本語と英語間の翻訳の自然さに定評があります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLの翻訳結果は必ず正しいですか？</summary>
+          <p class="faq-answer">いいえ。AIによる翻訳のため誤りが含まれる場合もあります。重要な文書は別の情報源でも翻訳結果を確認することが大切です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLに個人情報を入力しても大丈夫ですか？</summary>
+          <p class="faq-answer">機密情報や個人情報は入力しないようにしましょう。特に無料版では入力データがAIの学習に利用される可能性があるため注意が必要です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLはスマホでも使えますか？</summary>
+          <p class="faq-answer">はい。ブラウザ版に加えて、スマホアプリやデスクトップアプリからも利用できます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLは何ができますか？</summary>
+          <p class="faq-answer">ビジネス文書の翻訳、ECサイトの商品説明の翻訳、論文や資料の翻訳、海外旅行時の案内・メニューの翻訳、日常的なSNS・チャットの翻訳などに使えます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLにできないことはありますか？</summary>
+          <p class="faq-answer">無料版では文字数やファイル翻訳の回数に制限があり、また100％正確な翻訳を保証するものではありません。重要な内容は人の目での確認が必要です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLを使うのに専門知識は必要ですか？</summary>
+          <p class="faq-answer">不要です。翻訳したい文章を入力するだけで、AIが文脈を理解して自然な訳文を生成してくれます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLは他の翻訳ツールと何が違いますか？</summary>
+          <p class="faq-answer">文脈を踏まえた自然な訳文に定評があり、機械的な直訳ではなく人が書いたような表現に翻訳される点が大きな特徴です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLで翻訳した文章は商用利用できますか？</summary>
+          <p class="faq-answer">翻訳した文章自体の利用には、元の文章の著作権や利用規約の確認が必要です。最終的な利用判断は自分で行いましょう。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLはどんな仕組みで翻訳していますか？</summary>
+          <p class="faq-answer">入力された文章をAIが文脈や意味を理解し、最適で自然な翻訳を生成して画面に表示する、という流れで動いています。</p>
+        </details>
+        <details class="faq-item">
+          <summary>DeepLを使い始めるにはどうすればいいですか？</summary>
+          <p class="faq-answer">公式サイトにアクセスし、翻訳したい文章を入力するだけで、会員登録なしでもすぐに利用を開始できます。</p>
+        </details>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<footer class="footer">
+  <p class="footer-text">© 2026 AI図解ラボ</p>
+</footer>
+
+</body>
+</html>
