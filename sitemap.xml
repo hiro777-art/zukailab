@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AI図解ラボ sitemap
+  ※ lastmod は「実際にそのページを最後に更新した日」に書き換えてください。
+     嘘の日付を入れるとGoogleがlastmodを信用しなくなり、逆効果になります。
+  ※ NotebookLM / Canva、免責事項ページは公開後にコメントを外してください。
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url><loc>https://zukailab.com/</loc><lastmod>2026-07-11</lastmod></url>
+  <url><loc>https://zukailab.com/ai/</loc><lastmod>2026-07-11</lastmod></url>
+
+  <url><loc>https://zukailab.com/ai/chatgpt/</loc><lastmod>2026-07-11</lastmod></url>
+  <url><loc>https://zukailab.com/ai/claude/</loc><lastmod>2026-07-11</lastmod></url>
+  <url><loc>https://zukailab.com/ai/gemini/</loc><lastmod>2026-07-11</lastmod></url>
+  <url><loc>https://zukailab.com/ai/perplexity/</loc><lastmod>2026-07-11</lastmod></url>
+  <url><loc>https://zukailab.com/ai/copilot/</loc><lastmod>2026-07-11</lastmod></url>
+  <url><loc>https://zukailab.com/ai/notion-ai/</loc><lastmod>2026-07-11</lastmod></url>
+  <url><loc>https://zukailab.com/ai/midjourney/</loc><lastmod>2026-07-11</lastmod></url>
+  <url><loc>https://zukailab.com/ai/deepl/</loc><lastmod>2026-07-11</lastmod></url>
+
+  <!--
+  <url><loc>https://zukailab.com/ai/notebooklm/</loc><lastmod>2026-XX-XX</lastmod></url>
+  <url><loc>https://zukailab.com/ai/canva/</loc><lastmod>2026-XX-XX</lastmod></url>
+  <url><loc>https://zukailab.com/disclaimer/</loc><lastmod>2026-XX-XX</lastmod></url>
+  -->
+
+</urlset>
