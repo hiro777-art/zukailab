@@ -5,275 +5,136 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Notion AIとは？【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説 | AI図解ラボ</title>
 <meta name="description" content="Notion AIとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
-
+<link rel="canonical" href="https://zukailab.com/ai/notion-ai/">
 <!-- OGP -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI図解ラボ">
 <meta property="og:title" content="Notion AIとは？【30秒でわかる図解】 | AI図解ラボ">
 <meta property="og:description" content="Notion AIとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
-<meta property="og:image" content="/images/notion-ai-zukai-explanation.png">
-<meta property="og:type" content="article">
+<meta property="og:url" content="https://zukailab.com/ai/notion-ai/">
+<meta property="og:image" content="https://zukailab.com/images/notion-ai-zukai-explanation.png">
 <meta name="twitter:card" content="summary_large_image">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="/assets/style.css">
 <!-- 構造化データ：Article -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Notion AIとは？仕組み・できること・使い方を初心者向け解説",
-  "image": "https://zukailab.com/images/notion-ai-zukai-explanation.png",
-  "author": {"@type": "Person", "name": "Hiro"},
-  "publisher": {
-    "@type": "Organization",
-    "name": "AI図解ラボ",
-    "logo": {"@type": "ImageObject", "url": "https://zukailab.com/images/logo.png"}
-  },
-  "datePublished": "2026-06-21",
-  "dateModified": "2026-06-21",
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://zukailab.com/ai/notion-ai/"},
-  "description": "Notion AIとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Notion AIとは？仕組み・できること・使い方を初心者向け解説",
+  "image":"https://zukailab.com/images/notion-ai-zukai-explanation.png",
+  "author":{"@type":"Person","name":"Hiro","url":"https://zukailab.com/#person"},
+  "publisher":{"@type":"Organization","name":"AI図解ラボ","logo":{"@type":"ImageObject","url":"https://zukailab.com/images/logo.png"}},
+  "datePublished":"2026-06-21",
+  "dateModified":"2026-07-17",
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://zukailab.com/ai/notion-ai/"},
+  "description":"Notion AIとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
 }
 </script>
-
-<!-- 構造化データ：BreadcrumbList -->
+<!-- 構造化データ：BreadcrumbList（/ai/ は実在ページ） -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://zukailab.com/"},
-    {"@type": "ListItem", "position": 2, "name": "AI", "item": "https://zukailab.com/ai/"},
-    {"@type": "ListItem", "position": 3, "name": "Notion AIとは？"}
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"ホーム","item":"https://zukailab.com/"},
+    {"@type":"ListItem","position":2,"name":"AI","item":"https://zukailab.com/ai/"},
+    {"@type":"ListItem","position":3,"name":"Notion AIとは？"}
   ]
 }
 </script>
-
 <!-- 構造化データ：FAQPage（本文と完全一致） -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question","name": "Notion AIとは何ですか？","acceptedAnswer": {"@type": "Answer","text": "Notion AIは、メモ・タスク管理ツール「Notion」に組み込まれたAIアシスタントです。文章の作成や要約、情報の整理をNotionの画面から離れずに行えます。"}},
-    {"@type": "Question","name": "Notion AIは無料で使えますか？","acceptedAnswer": {"@type": "Answer","text": "Free・Plusプランでは合計20回まで無料で試せます（月次リセットはありません）。本格的に使うにはBusinessプラン以上への加入が必要です。"}},
-    {"@type": "Question","name": "Notion AIにはどんな種類がありますか？","acceptedAnswer": {"@type": "Answer","text": "文章生成・要約・翻訳・Q&A・アクション抽出などの基本機能のほか、Businessプラン以上ではAIエージェントやAIコネクター機能も使えます。"}},
-    {"@type": "Question","name": "Notion AIの回答は必ず正しいですか？","acceptedAnswer": {"@type": "Answer","text": "いいえ。AIの回答は間違っていることもあるため、重要な内容は自分で確認することが大切です。"}},
-    {"@type": "Question","name": "Notion AIに個人情報を入力しても大丈夫ですか？","acceptedAnswer": {"@type": "Answer","text": "名前・住所・電話番号などの個人情報や機密情報は入力しないことをおすすめします。"}},
-    {"@type": "Question","name": "Notion AIはスマホでも使えますか？","acceptedAnswer": {"@type": "Answer","text": "はい。Notionアプリ（iOS / Android）からも利用できます。"}},
-    {"@type": "Question","name": "Notion AIは日本語に対応していますか？","acceptedAnswer": {"@type": "Answer","text": "はい。日本語での質問や指示にも自然な日本語で対応してくれます。"}},
-    {"@type": "Question","name": "Notion AIは何ができますか？","acceptedAnswer": {"@type": "Answer","text": "文章の要約、ブログ・記事の下書き作成、リストの整理、アイデア出し、学習サポートなどに使えます。"}},
-    {"@type": "Question","name": "Notion AIにできないことはありますか？","acceptedAnswer": {"@type": "Answer","text": "感情を持って判断することはできず、回答に誤りが含まれる可能性もあります。重要な内容は自分で確認しましょう。"}},
-    {"@type": "Question","name": "Notion AIを使うのに専門知識は必要ですか？","acceptedAnswer": {"@type": "Answer","text": "不要です。ページ上でスペースキーを押すだけで起動できるため、初心者でも問題ありません。"}},
-    {"@type": "Question","name": "Notion AIは他のAIチャットと何が違いますか？","acceptedAnswer": {"@type": "Answer","text": "ChatGPTのような単体のAIチャットと異なり、自分のNotionページやデータベースの内容を理解した上で回答してくれる点が大きな違いです。"}},
-    {"@type": "Question","name": "Notion AIで作った内容は商用利用できますか？","acceptedAnswer": {"@type": "Answer","text": "多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。"}},
-    {"@type": "Question","name": "Notion AIはどんな仕組みで回答していますか？","acceptedAnswer": {"@type": "Answer","text": "入力された指示とNotion内の関連情報をAIが理解し、内容を整理・生成して、そのままページ上に結果を表示しています。"}},
-    {"@type": "Question","name": "Notion AIを使うとどれくらい作業時間を短縮できますか？","acceptedAnswer": {"@type": "Answer","text": "文章作成や情報整理にかかる時間を大幅に短縮できるケースが多いです。"}},
-    {"@type": "Question","name": "Notion AIを使い始めるにはどうすればいいですか？","acceptedAnswer": {"@type": "Answer","text": "Notionのページ上でスペースキーを押すだけで起動できます。本格利用にはプランのアップグレードが必要な場合があります。"}}
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Notion AIとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"Notion AIは、メモ・タスク管理ツール「Notion」に組み込まれたAIアシスタントです。文章の作成や要約、情報の整理をNotionの画面から離れずに行えます。"}},
+    {"@type":"Question","name":"Notion AIは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"Free・Plusプランでは合計20回まで無料で試せます（月次リセットはありません）。本格的に使うにはBusinessプラン以上への加入が必要です。"}},
+    {"@type":"Question","name":"Notion AIにはどんな種類がありますか？","acceptedAnswer":{"@type":"Answer","text":"文章生成・要約・翻訳・Q&A・アクション抽出などの基本機能のほか、Businessプラン以上ではAIエージェントやAIコネクター機能も使えます。"}},
+    {"@type":"Question","name":"Notion AIの回答は必ず正しいですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。AIの回答は間違っていることもあるため、重要な内容は自分で確認することが大切です。"}},
+    {"@type":"Question","name":"Notion AIに個人情報を入力しても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"名前・住所・電話番号などの個人情報や機密情報は入力しないことをおすすめします。"}},
+    {"@type":"Question","name":"Notion AIはスマホでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。Notionアプリ（iOS / Android）からも利用できます。"}},
+    {"@type":"Question","name":"Notion AIは日本語に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"はい。日本語での質問や指示にも自然な日本語で対応してくれます。"}},
+    {"@type":"Question","name":"Notion AIは何ができますか？","acceptedAnswer":{"@type":"Answer","text":"文章の要約、ブログ・記事の下書き作成、リストの整理、アイデア出し、学習サポートなどに使えます。"}},
+    {"@type":"Question","name":"Notion AIにできないことはありますか？","acceptedAnswer":{"@type":"Answer","text":"感情を持って判断することはできず、回答に誤りが含まれる可能性もあります。重要な内容は自分で確認しましょう。"}},
+    {"@type":"Question","name":"Notion AIを使うのに専門知識は必要ですか？","acceptedAnswer":{"@type":"Answer","text":"不要です。ページ上でスペースキーを押すだけで起動できるため、初心者でも問題ありません。"}},
+    {"@type":"Question","name":"Notion AIは他のAIチャットと何が違いますか？","acceptedAnswer":{"@type":"Answer","text":"ChatGPTのような単体のAIチャットと異なり、自分のNotionページやデータベースの内容を理解した上で回答してくれる点が大きな違いです。"}},
+    {"@type":"Question","name":"Notion AIで作った内容は商用利用できますか？","acceptedAnswer":{"@type":"Answer","text":"多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。"}},
+    {"@type":"Question","name":"Notion AIはどんな仕組みで回答していますか？","acceptedAnswer":{"@type":"Answer","text":"入力された指示とNotion内の関連情報をAIが理解し、内容を整理・生成して、そのままページ上に結果を表示しています。"}},
+    {"@type":"Question","name":"Notion AIを使うとどれくらい作業時間を短縮できますか？","acceptedAnswer":{"@type":"Answer","text":"文章作成や情報整理にかかる時間を大幅に短縮できるケースが多いです。"}},
+    {"@type":"Question","name":"Notion AIを使い始めるにはどうすればいいですか？","acceptedAnswer":{"@type":"Answer","text":"Notionのページ上でスペースキーを押すだけで起動できます。本格利用にはプランのアップグレードが必要な場合があります。"}}
   ]
 }
 </script>
-
-<style>
-:root{
-  --ink:#0B1426;
-  --ink2:#3D4F6A;
-  --ink3:#7A8C9E;
-  --bg:#F8F9FC;
-  --surface:#FFFFFF;
-  --navy:#0B1426;
-  --navy-mid:#1A2E4A;
-  --emerald:#00C896;
-  --emerald-dim:#00C89620;
-  --emerald-light:#E6FAF5;
-  --purple:#6C63FF;
-  --purple-light:#F0EFFF;
-  --amber:#F5A623;
-  --amber-light:#FEF6E7;
-  --red:#E5484D;
-  --red-light:#FDECEC;
-  --border:rgba(11,20,38,0.09);
-  --r:10px;
-  --r-lg:18px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
-
-/* ── HEADER（トップページと共通） ── */
-.header{background:var(--navy);position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 1px 0 rgba(0,200,150,0.15)}
-.logo{font-family:'Zen Kaku Gothic New',sans-serif;font-size:19px;font-weight:900;color:#fff;letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:6px}
-.logo-mark{width:26px;height:26px;background:var(--emerald);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
-.logo span{color:var(--emerald)}
-.header-nav{margin-left:auto;display:flex;gap:2px;align-items:center}
-.nav-link{color:rgba(255,255,255,0.65);font-size:13px;text-decoration:none;padding:6px 11px;border-radius:7px;transition:background .15s}
-.nav-link:hover{background:rgba(255,255,255,0.09);color:#fff}
-
-.container{max-width:760px;margin:0 auto;padding:0 24px}
-
-/* ── パンくず ── */
-.breadcrumb{font-size:12px;color:var(--ink3);padding:16px 0 0}
-.breadcrumb a{color:var(--ink3);text-decoration:none}
-.breadcrumb a:hover{color:var(--emerald)}
-
-/* ── 記事ヘッダー ── */
-.article-header{padding:20px 0 28px}
-.category-badge{display:inline-block;background:var(--emerald-light);color:#005740;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
-.article-h1{font-family:'Zen Kaku Gothic New',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:900;color:var(--ink);line-height:1.3;letter-spacing:-0.02em;margin-bottom:14px}
-.article-subcopy{display:inline-block;background:var(--amber-light);color:#7A4D00;font-size:14px;font-weight:700;padding:8px 16px;border-radius:8px;line-height:1.6}
-.publish-date{display:inline-flex;align-items:center;gap:6px;background:#E8F1FB;color:var(--ink2);font-size:13px;font-weight:700;padding:6px 14px;border-radius:8px;margin-top:12px}
-
-/* ── 図解画像（主役） ── */
-.zukai-wrap{text-align:center;margin:28px 0}
-.zukai-wrap img{max-width:600px;width:100%;height:auto;display:block;margin:0 auto;border-radius:var(--r-lg);box-shadow:0 12px 40px rgba(11,20,38,0.12);border:1px solid var(--border)}
-
-/* ── 保存版バナー ── */
-.save-banner{background:var(--navy);color:#fff;font-size:13px;font-weight:700;text-align:center;padding:10px 16px;border-radius:var(--r);margin:20px 0;display:flex;align-items:center;justify-content:center;gap:8px}
-.save-banner .pin{color:var(--emerald)}
-
-/* ── 一言結論ボックス ── */
-.conclusion-box{background:var(--emerald-light);border:1px solid rgba(0,200,150,0.3);border-radius:var(--r-lg);padding:18px 22px;margin:20px 0;font-size:15px;font-weight:700;color:#005740;line-height:1.7}
-
-/* ── 3行要約ボックス ── */
-.summary-box{background:var(--navy);border-radius:var(--r-lg);padding:22px 24px;margin:20px 0 36px}
-.summary-box-title{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:12px;text-transform:uppercase}
-.summary-row{display:flex;gap:10px;color:rgba(255,255,255,0.88);font-size:14px;line-height:1.7;margin-bottom:8px}
-.summary-row:last-child{margin-bottom:0}
-.summary-num{color:var(--emerald);font-weight:900;flex-shrink:0}
-
-/* ── 基本情報テーブル ── */
-.compare-table{width:100%;border-collapse:collapse;margin:28px 0 36px;font-size:14px;background:var(--surface);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 4px 16px rgba(11,20,38,0.06)}
-.compare-table caption{background:var(--navy);color:#fff;font-weight:900;font-size:15px;padding:14px;font-family:'Zen Kaku Gothic New',sans-serif}
-.compare-table th,.compare-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border)}
-.compare-table th{background:var(--navy-mid);color:#fff;font-weight:700;width:32%}
-.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:none}
-.compare-table td{color:var(--ink2)}
-.compare-table a{color:var(--emerald);font-weight:700;text-decoration:none}
-.compare-table a:hover{text-decoration:underline}
-
-/* ── 本文セクション ── */
-.content-section{margin:40px 0}
-.content-h2{font-family:'Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:14px;padding-left:14px;border-left:4px solid var(--emerald)}
-.content-h3{font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;font-weight:900;color:var(--ink2);margin:22px 0 10px;padding-left:12px;border-left:3px solid var(--amber)}
-.content-section p{font-size:15px;color:var(--ink2);line-height:1.9;margin-bottom:14px}
-
-/* ── FAQ アコーディオン ── */
-.faq-list{display:flex;flex-direction:column;gap:10px;margin:20px 0 40px}
-.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
-.faq-item summary{padding:16px 18px;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:10px;list-style:none}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::before{content:'Q';flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--emerald);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center}
-.faq-item[open] summary::before{background:var(--navy)}
-.faq-answer{padding:0 18px 16px 50px;font-size:13.5px;color:var(--ink2);line-height:1.8}
-
-/* ── 末尾CTA（1本のみ） ── */
-.final-cta{background:linear-gradient(140deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:var(--r-lg);padding:32px 26px;margin:40px 0;text-align:center}
-.final-cta-eyebrow{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:10px;text-transform:uppercase}
-.final-cta-title{font-family:'Zen Kaku Gothic New',sans-serif;color:#fff;font-size:18px;font-weight:900;margin-bottom:20px;line-height:1.5}
-.final-cta-list{display:flex;flex-direction:column;gap:8px}
-.final-cta-link{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;padding:13px 18px;border-radius:var(--r);text-align:left;display:flex;align-items:center;justify-content:space-between;transition:background .15s}
-.final-cta-link:hover{background:rgba(0,200,150,0.18);border-color:var(--emerald)}
-.final-cta-link.primary{background:var(--emerald);color:var(--navy);border-color:var(--emerald)}
-.final-cta-link.primary:hover{opacity:.9}
-
-/* ── フッター ── */
-.footer{background:var(--navy);padding:32px 24px;text-align:center;margin-top:48px}
-.footer-text{color:rgba(255,255,255,0.4);font-size:12px}
-.footer-links{display:flex;gap:16px;justify-content:center;margin-bottom:14px}
-.footer-links a{color:rgba(255,255,255,0.6);font-size:12px;text-decoration:none}
-
-@media(max-width:480px){
-  .article-header{padding:16px 0 22px}
-  .compare-table{font-size:12.5px}
-  .compare-table th,.compare-table td{padding:10px 10px}
-  .compare-table th{width:36%}
-}
-</style>
 </head>
 <body>
-
-<!-- ヘッダー -->
 <header class="header">
-  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<span>図解</span>ラボ</a>
+  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<em>図解</em>ラボ</a>
   <nav class="header-nav">
     <a href="/ai/" class="nav-link">AI</a>
-    <a href="/efficiency/" class="nav-link">業務効率化</a>
-    <a href="/compare/" class="nav-link">比較</a>
   </nav>
 </header>
-
 <div class="container">
-
-  <!-- パンくず -->
   <nav class="breadcrumb">
     <a href="/">ホーム</a> &gt; <a href="/ai/">AI</a> &gt; Notion AIとは？
   </nav>
-
-  <!-- 記事ヘッダー -->
   <article>
     <header class="article-header">
-      <span class="category-badge">AI・生成AI</span>
+      <span class="category-badge">図 06 ｜ AI・生成AI</span>
       <h1 class="article-h1">Notion AIとは？</h1>
       <p class="article-subcopy">【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説</p>
-      <div class="publish-date">📅 公開：2026年6月21日</div>
+      <time class="pubdate" datetime="2026-06-21">📅 公開：2026年6月21日 ／ 更新：2026年7月17日</time>
     </header>
-
-    <!-- 図解画像（主役） -->
     <div class="zukai-wrap">
       <img src="/images/notion-ai-zukai-explanation.png"
-           alt="Notion AIの仕組みを図解したイラスト。とは・仕組み・メリット・活用例・注意点・まとめの6項目を解説"
+           alt="Notion AIの仕組みを図解したイラスト。定義・仕組み・メリット・活用例・注意点・まとめの6項目を解説"
            width="1080" height="1350" loading="eager">
     </div>
-
-    <!-- 保存版バナー -->
     <div class="save-banner"><span class="pin">📌</span> 保存版｜あとで見返したい人はブックマーク推奨</div>
-
-    <!-- 一言結論ボックス -->
     <div class="conclusion-box">
       Notion AIとは、メモ・タスク管理ツール「Notion」に組み込まれたAIアシスタント。文章の作成や要約、情報の整理をNotionの画面から離れずに行えるのが特徴です。
     </div>
-
-    <!-- 3行要約ボックス -->
     <div class="summary-box">
       <div class="summary-box-title">30秒でわかる要約</div>
       <div class="summary-row"><span class="summary-num">①</span>Notion AIはNotionに統合されたAIアシスタント</div>
       <div class="summary-row"><span class="summary-num">②</span>自分のページやデータベースを理解した回答が得意</div>
       <div class="summary-row"><span class="summary-num">③</span>本格利用にはBusinessプラン以上が必要</div>
     </div>
-
-    <!-- 基本情報テーブル -->
     <table class="compare-table">
       <caption>Notion AI 基本情報</caption>
       <tbody>
         <tr><th>サービス名</th><td>Notion AI</td></tr>
         <tr><th>開発元</th><td>Notion Labs, Inc.</td></tr>
-        <tr><th>料金</th><td>無料試用あり（Free/Plusは合計20回まで／本格利用はBusiness以上）</td></tr>
+        <tr><th>料金</th><td>無料試用あり／本格利用はBusinessプラン以上が必要（詳細は下の「最新情報」を参照）</td></tr>
         <tr><th>対応言語</th><td>日本語を含む多言語に対応</td></tr>
         <tr><th>主な機能</th><td>文章生成、要約、翻訳、Q&amp;A、情報整理</td></tr>
-        <tr><th>画像生成</th><td>△（Business/Enterprise限定、1日10件まで）</td></tr>
+        <tr><th>画像生成</th><td>△（上位プラン限定、1日あたりの上限あり）</td></tr>
         <tr><th>コード作成</th><td>△（簡易なコード生成・解説のみ）</td></tr>
         <tr><th>スマホ利用</th><td>○（iOS / Android アプリ・ブラウザ）</td></tr>
         <tr><th>Webサイト</th><td><a href="https://www.notion.so" rel="nofollow noopener" target="_blank">https://www.notion.so</a></td></tr>
-        <tr><th>セキュリティ・プライバシー</th><td>企業向けセキュリティ機能あり（Enterpriseはゼロデータ保持）</td></tr>
+        <tr><th>セキュリティ・プライバシー</th><td>企業向けセキュリティ機能あり（上位プランでは高度なデータ保護に対応）</td></tr>
         <tr><th>おすすめ用途</th><td>文章要約、議事録整理、ブログ下書き、学習サポート</td></tr>
       </tbody>
     </table>
-
-    <!-- ①定義 -->
+    <!-- ▼ すぐ古くなる情報（プラン名・料金・モデル名）はここに隔離する。更新はこのブロックだけでよい -->
+    <div class="volatile-box">
+      <span class="volatile-head">最新情報｜2026年7月17日時点</span>
+      Free・Plusプランでは合計20回までの試用枠のみで、本格的に使うにはBusinessプラン以上（年払いで1人あたり月20ドル前後）への加入が必要です。画像生成はBusiness/Enterprise限定（1日10件まで）です。料金・プラン構成・利用できる機能は変わることがあるため、最新は
+      <a href="https://www.notion.so" rel="nofollow noopener" target="_blank">公式サイト</a>で必ずご確認ください。
+    </div>
     <section class="content-section">
       <h2 class="content-h2">Notion AIとは（定義）</h2>
       <p>Notion AIとは、ノート・タスク管理アプリ「Notion」に標準で搭載されているAI機能です。ページを開いたまま文章の作成・要約・翻訳・Q&amp;Aができるため、別のAIツールに切り替える手間がありません。</p>
       <p>ChatGPTやGeminiのような単体のAIチャットとは異なり、Notion AIは自分が普段使っているメモやデータベースの内容を理解した上で回答を生成してくれる点が大きな違いです。文章作成だけでなく、Notion内の情報を活用した「業務に統合されたAI」という位置づけが特徴です。</p>
     </section>
-
-    <!-- ②仕組み -->
     <section class="content-section">
       <h2 class="content-h2">Notion AIの仕組み</h2>
       <p>Notion AIは、ページ上でスペースキーを押すなどして指示を入力すると、入力内容に加えてNotion内の関連ページやデータベースの情報を理解します。その上で内容に合わせた文章やまとめを生成し、そのままページ上に結果を表示する、という流れで動いています。</p>
       <p>画面を切り替えずに編集・活用できる点が、単体のAIチャットツールとの大きな違いです。指示を入力するだけで、Notion内の情報を踏まえた回答がすぐに得られます。</p>
     </section>
-
-    <!-- ③できること／できないこと -->
     <section class="content-section">
       <h2 class="content-h2">Notion AIでできること</h2>
       <p>Notion AIは機能ベースで見ると、主に次のようなことができます。</p>
@@ -281,15 +142,12 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
       <strong>ブログ・記事作成：</strong>見出しや本文の下書きを作ってくれます。<br>
       <strong>リスト・整理：</strong>情報やタスクを整理して見やすくします。<br>
       <strong>アイデア出し：</strong>企画やタイトルのアイデアを提案してくれます。</p>
-
       <h3 class="content-h3">Notion AIでできないこと</h3>
       <p>一方で、次のようなことには対応できない、または注意が必要です。<br>
       <strong>無制限の無料利用：</strong>Free・Plusプランでは合計20回までの試用枠のみで、本格的に使うにはBusinessプラン以上（年払いで1人あたり月20ドル前後）への加入が必要です。<br>
       <strong>100％正確な保証：</strong>AIの回答には誤りが含まれる可能性があるため、重要な情報は自分でも確認が必要です。<br>
       <strong>無条件の画像生成：</strong>画像生成機能はBusiness/Enterpriseプラン限定で、1日10件までの制限があります。</p>
     </section>
-
-    <!-- ④活用例 -->
     <section class="content-section">
       <h2 class="content-h2">Notion AIの活用例</h2>
       <p>実際にどんな人がどう使っているか、人物別に見てみましょう。</p>
@@ -299,8 +157,6 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
       <strong>プロジェクト管理者：</strong>タスクやリストの整理に使われています。<br>
       <strong>企画担当者：</strong>アイデア出しや企画書のたたき台作りに使われています。</p>
     </section>
-
-    <!-- ⑤注意点 -->
     <section class="content-section">
       <h2 class="content-h2">Notion AIの注意点</h2>
       <p>便利な一方で、使う際に知っておきたい注意点もあります。</p>
@@ -310,87 +166,54 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
       <strong>④著作権の確認：</strong>生成物の利用はルールを確認して使いましょう。<br>
       <strong>⑤料金プランの確認：</strong>Free・Plusプランは合計20回までの試用枠のみです。本格的に使うにはBusinessプラン以上への加入が前提になるため、「無料でずっと使える」という他のAIツールとは前提が異なる点に注意しましょう。</p>
     </section>
-
-    <!-- ⑥まとめ -->
     <section class="content-section">
       <h2 class="content-h2">まとめ</h2>
       <p>Notion AIは、Notionのワークスペース内に統合されたAIアシスタントです。文章作成や整理を強力にサポートし、使い方次第でアイデア出しから学習サポートまで幅広く活用できます。ただし無料で使える範囲には限りがあり、本格的に活用するにはBusinessプラン以上への加入が前提になる点には注意が必要です。ルールと料金体系を理解した上で使えば、初心者でも安心して「考える時間」を増やしてくれる心強いパートナーになってくれるはずです。</p>
     </section>
-
-    <!-- FAQ 15問 -->
     <section class="content-section">
       <h2 class="content-h2">よくある質問</h2>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary>Notion AIとは何ですか？</summary>
-          <p class="faq-answer">Notion AIは、メモ・タスク管理ツール「Notion」に組み込まれたAIアシスタントです。文章の作成や要約、情報の整理をNotionの画面から離れずに行えます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIは無料で使えますか？</summary>
-          <p class="faq-answer">Free・Plusプランでは合計20回まで無料で試せます（月次リセットはありません）。本格的に使うにはBusinessプラン以上への加入が必要です。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIにはどんな種類がありますか？</summary>
-          <p class="faq-answer">文章生成・要約・翻訳・Q&amp;A・アクション抽出などの基本機能のほか、Businessプラン以上ではAIエージェントやAIコネクター機能も使えます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIの回答は必ず正しいですか？</summary>
-          <p class="faq-answer">いいえ。AIの回答は間違っていることもあるため、重要な内容は自分で確認することが大切です。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIに個人情報を入力しても大丈夫ですか？</summary>
-          <p class="faq-answer">名前・住所・電話番号などの個人情報や機密情報は入力しないことをおすすめします。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIはスマホでも使えますか？</summary>
-          <p class="faq-answer">はい。Notionアプリ（iOS / Android）からも利用できます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIは日本語に対応していますか？</summary>
-          <p class="faq-answer">はい。日本語での質問や指示にも自然な日本語で対応してくれます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIは何ができますか？</summary>
-          <p class="faq-answer">文章の要約、ブログ・記事の下書き作成、リストの整理、アイデア出し、学習サポートなどに使えます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIにできないことはありますか？</summary>
-          <p class="faq-answer">感情を持って判断することはできず、回答に誤りが含まれる可能性もあります。重要な内容は自分で確認しましょう。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIを使うのに専門知識は必要ですか？</summary>
-          <p class="faq-answer">不要です。ページ上でスペースキーを押すだけで起動できるため、初心者でも問題ありません。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIは他のAIチャットと何が違いますか？</summary>
-          <p class="faq-answer">ChatGPTのような単体のAIチャットと異なり、自分のNotionページやデータベースの内容を理解した上で回答してくれる点が大きな違いです。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIで作った内容は商用利用できますか？</summary>
-          <p class="faq-answer">多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIはどんな仕組みで回答していますか？</summary>
-          <p class="faq-answer">入力された指示とNotion内の関連情報をAIが理解し、内容を整理・生成して、そのままページ上に結果を表示しています。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIを使うとどれくらい作業時間を短縮できますか？</summary>
-          <p class="faq-answer">文章作成や情報整理にかかる時間を大幅に短縮できるケースが多いです。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Notion AIを使い始めるにはどうすればいいですか？</summary>
-          <p class="faq-answer">Notionのページ上でスペースキーを押すだけで起動できます。本格利用にはプランのアップグレードが必要な場合があります。</p>
-        </details>
+        <details class="faq-item"><summary>Notion AIとは何ですか？</summary><p class="faq-answer">Notion AIは、メモ・タスク管理ツール「Notion」に組み込まれたAIアシスタントです。文章の作成や要約、情報の整理をNotionの画面から離れずに行えます。</p></details>
+        <details class="faq-item"><summary>Notion AIは無料で使えますか？</summary><p class="faq-answer">Free・Plusプランでは合計20回まで無料で試せます（月次リセットはありません）。本格的に使うにはBusinessプラン以上への加入が必要です。</p></details>
+        <details class="faq-item"><summary>Notion AIにはどんな種類がありますか？</summary><p class="faq-answer">文章生成・要約・翻訳・Q&amp;A・アクション抽出などの基本機能のほか、Businessプラン以上ではAIエージェントやAIコネクター機能も使えます。</p></details>
+        <details class="faq-item"><summary>Notion AIの回答は必ず正しいですか？</summary><p class="faq-answer">いいえ。AIの回答は間違っていることもあるため、重要な内容は自分で確認することが大切です。</p></details>
+        <details class="faq-item"><summary>Notion AIに個人情報を入力しても大丈夫ですか？</summary><p class="faq-answer">名前・住所・電話番号などの個人情報や機密情報は入力しないことをおすすめします。</p></details>
+        <details class="faq-item"><summary>Notion AIはスマホでも使えますか？</summary><p class="faq-answer">はい。Notionアプリ（iOS / Android）からも利用できます。</p></details>
+        <details class="faq-item"><summary>Notion AIは日本語に対応していますか？</summary><p class="faq-answer">はい。日本語での質問や指示にも自然な日本語で対応してくれます。</p></details>
+        <details class="faq-item"><summary>Notion AIは何ができますか？</summary><p class="faq-answer">文章の要約、ブログ・記事の下書き作成、リストの整理、アイデア出し、学習サポートなどに使えます。</p></details>
+        <details class="faq-item"><summary>Notion AIにできないことはありますか？</summary><p class="faq-answer">感情を持って判断することはできず、回答に誤りが含まれる可能性もあります。重要な内容は自分で確認しましょう。</p></details>
+        <details class="faq-item"><summary>Notion AIを使うのに専門知識は必要ですか？</summary><p class="faq-answer">不要です。ページ上でスペースキーを押すだけで起動できるため、初心者でも問題ありません。</p></details>
+        <details class="faq-item"><summary>Notion AIは他のAIチャットと何が違いますか？</summary><p class="faq-answer">ChatGPTのような単体のAIチャットと異なり、自分のNotionページやデータベースの内容を理解した上で回答してくれる点が大きな違いです。</p></details>
+        <details class="faq-item"><summary>Notion AIで作った内容は商用利用できますか？</summary><p class="faq-answer">多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。</p></details>
+        <details class="faq-item"><summary>Notion AIはどんな仕組みで回答していますか？</summary><p class="faq-answer">入力された指示とNotion内の関連情報をAIが理解し、内容を整理・生成して、そのままページ上に結果を表示しています。</p></details>
+        <details class="faq-item"><summary>Notion AIを使うとどれくらい作業時間を短縮できますか？</summary><p class="faq-answer">文章作成や情報整理にかかる時間を大幅に短縮できるケースが多いです。</p></details>
+        <details class="faq-item"><summary>Notion AIを使い始めるにはどうすればいいですか？</summary><p class="faq-answer">Notionのページ上でスペースキーを押すだけで起動できます。本格利用にはプランのアップグレードが必要な場合があります。</p></details>
       </div>
     </section>
-
+    <!-- 末尾CTA：実在する記事だけにリンクする -->
+    <div class="final-cta">
+      <div class="final-cta-eyebrow">次に読むなら</div>
+      <div class="final-cta-title">ほかのAIとも比べてみる</div>
+      <div class="final-cta-list">
+        <a href="/ai/chatgpt/" class="final-cta-link primary">ChatGPTとは？を読む <span>→</span></a>
+        <a href="/ai/gemini/" class="final-cta-link">Geminiとは？を読む <span>→</span></a>
+        <a href="/ai/" class="final-cta-link">AIツール一覧を見る <span>→</span></a>
+      </div>
+    </div>
   </article>
 </div>
-
-<!-- フッター -->
 <footer class="footer">
-  <p class="footer-text">© 2026 AI図解ラボ</p>
+  <div class="footer-inner">
+    <p class="disclosure">
+      当サイトはアフィリエイトプログラムに参加しており、記事内のリンクから商品・サービスの申込があった場合、運営者が紹介料を受け取ることがあります。掲載内容は執筆時点の情報にもとづきます。最新の仕様・料金は各公式サイトをご確認ください。
+    </p>
+    <nav class="footer-links">
+      <a href="/">トップ</a>
+      <a href="/ai/">AIツール一覧</a>
+      <a href="/disclaimer/">免責事項・プライバシーポリシー</a>
+    </nav>
+    <p class="footer-text">© 2026 AI図解ラボ</p>
+  </div>
 </footer>
-
 </body>
 </html>
