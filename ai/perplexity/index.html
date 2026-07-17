@@ -5,241 +5,104 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Perplexityとは？【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説 | AI図解ラボ</title>
 <meta name="description" content="Perplexityとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
-
+<link rel="canonical" href="https://zukailab.com/ai/perplexity/">
 <!-- OGP -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI図解ラボ">
 <meta property="og:title" content="Perplexityとは？【30秒でわかる図解】 | AI図解ラボ">
 <meta property="og:description" content="Perplexityとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
-<meta property="og:image" content="/images/perplexity-zukai-explanation.png">
-<meta property="og:type" content="article">
+<meta property="og:url" content="https://zukailab.com/ai/perplexity/">
+<meta property="og:image" content="https://zukailab.com/images/perplexity-zukai-explanation.png">
 <meta name="twitter:card" content="summary_large_image">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="/assets/style.css">
 <!-- 構造化データ：Article -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Perplexityとは？仕組み・できること・使い方を初心者向け解説",
-  "image": "https://zukailab.com/images/perplexity-zukai-explanation.png",
-  "author": {"@type": "Person", "name": "Hiro"},
-  "publisher": {
-    "@type": "Organization",
-    "name": "AI図解ラボ",
-    "logo": {"@type": "ImageObject", "url": "https://zukailab.com/images/logo.png"}
-  },
-  "datePublished": "2026-06-20",
-  "dateModified": "2026-06-20",
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://zukailab.com/ai/perplexity/"},
-  "description": "Perplexityとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Perplexityとは？仕組み・できること・使い方を初心者向け解説",
+  "image":"https://zukailab.com/images/perplexity-zukai-explanation.png",
+  "author":{"@type":"Person","name":"Hiro","url":"https://zukailab.com/#person"},
+  "publisher":{"@type":"Organization","name":"AI図解ラボ","logo":{"@type":"ImageObject","url":"https://zukailab.com/images/logo.png"}},
+  "datePublished":"2026-06-20",
+  "dateModified":"2026-07-17",
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://zukailab.com/ai/perplexity/"},
+  "description":"Perplexityとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
 }
 </script>
-
-<!-- 構造化データ：BreadcrumbList -->
+<!-- 構造化データ：BreadcrumbList（/ai/ は実在ページ） -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://zukailab.com/"},
-    {"@type": "ListItem", "position": 2, "name": "AI", "item": "https://zukailab.com/ai/"},
-    {"@type": "ListItem", "position": 3, "name": "Perplexityとは？"}
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"ホーム","item":"https://zukailab.com/"},
+    {"@type":"ListItem","position":2,"name":"AI","item":"https://zukailab.com/ai/"},
+    {"@type":"ListItem","position":3,"name":"Perplexityとは？"}
   ]
 }
 </script>
-
 <!-- 構造化データ：FAQPage（本文と完全一致） -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question","name": "Perplexityとは何ですか？","acceptedAnswer": {"@type": "Answer","text": "Perplexityは、AIがWeb上の情報を調べて、出典（根拠）つきで回答してくれる検索エンジンです。質問を入力するだけで、最新の情報をもとに答えてくれます。"}},
-    {"@type": "Question","name": "Perplexityは無料で使えますか？","acceptedAnswer": {"@type": "Answer","text": "無料プランがあり、基本的な機能は無料で利用できます。より高度な機能を使いたい場合は有料プランが用意されています。"}},
-    {"@type": "Question","name": "Perplexityにはどんな種類がありますか？","acceptedAnswer": {"@type": "Answer","text": "無料版のほか、個人向け・法人向けなど用途に応じたプランがあります。"}},
-    {"@type": "Question","name": "Perplexityの回答は必ず正しいですか？","acceptedAnswer": {"@type": "Answer","text": "いいえ。AIの回答は間違っていることもあるため、表示される出典を確認することが大切です。"}},
-    {"@type": "Question","name": "Perplexityに個人情報を入力しても大丈夫ですか？","acceptedAnswer": {"@type": "Answer","text": "名前・住所・電話番号などの個人情報は入力しないことをおすすめします。"}},
-    {"@type": "Question","name": "Perplexityはスマホでも使えますか？","acceptedAnswer": {"@type": "Answer","text": "はい。公式アプリやブラウザから、スマホでも問題なく利用できます。"}},
-    {"@type": "Question","name": "Perplexityは日本語に対応していますか？","acceptedAnswer": {"@type": "Answer","text": "はい。日本語の質問にも自然な日本語で回答してくれます。"}},
-    {"@type": "Question","name": "Perplexityは何ができますか？","acceptedAnswer": {"@type": "Answer","text": "調べもの、最新情報の検索、要約、比較検討など幅広い用途に使えます。"}},
-    {"@type": "Question","name": "Perplexityにできないことはありますか？","acceptedAnswer": {"@type": "Answer","text": "感情を持って判断することはできず、回答に誤りが含まれる可能性もあります。重要な内容は出典を確認しましょう。"}},
-    {"@type": "Question","name": "Perplexityを使うのに専門知識は必要ですか？","acceptedAnswer": {"@type": "Answer","text": "不要です。話しかけるように質問するだけで使えるため、初心者でも問題ありません。"}},
-    {"@type": "Question","name": "Perplexityは出典を確認できますか？","acceptedAnswer": {"@type": "Answer","text": "はい。回答の下に情報源（リンク）が表示されるため、自分で内容を確認できます。"}},
-    {"@type": "Question","name": "Perplexityで調べた内容は商用利用できますか？","acceptedAnswer": {"@type": "Answer","text": "多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。"}},
-    {"@type": "Question","name": "Perplexityはどんな仕組みで回答していますか？","acceptedAnswer": {"@type": "Answer","text": "入力された質問に対してWeb上の情報を検索し、内容を整理・要約して、出典つきの回答を表示しています。"}},
-    {"@type": "Question","name": "Perplexityを使うと調べる時間は短縮できますか？","acceptedAnswer": {"@type": "Answer","text": "はい。複数のサイトを自分で探す手間が減り、調べる時間を大幅に短縮できるケースが多いです。"}},
-    {"@type": "Question","name": "Perplexityを使い始めるにはどうすればいいですか？","acceptedAnswer": {"@type": "Answer","text": "公式サイトやアプリからアカウントを登録するだけで、すぐに使い始めることができます。"}}
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Perplexityとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"Perplexityは、AIがWeb上の情報を調べて、出典（根拠）つきで回答してくれる検索エンジンです。質問を入力するだけで、最新の情報をもとに答えてくれます。"}},
+    {"@type":"Question","name":"Perplexityは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"無料プランがあり、基本的な機能は無料で利用できます。より高度な機能を使いたい場合は有料プランが用意されています。"}},
+    {"@type":"Question","name":"Perplexityにはどんな種類がありますか？","acceptedAnswer":{"@type":"Answer","text":"無料版のほか、個人向け・法人向けなど用途に応じたプランがあります。"}},
+    {"@type":"Question","name":"Perplexityの回答は必ず正しいですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。AIの回答は間違っていることもあるため、表示される出典を確認することが大切です。"}},
+    {"@type":"Question","name":"Perplexityに個人情報を入力しても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"名前・住所・電話番号などの個人情報は入力しないことをおすすめします。"}},
+    {"@type":"Question","name":"Perplexityはスマホでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。公式アプリやブラウザから、スマホでも問題なく利用できます。"}},
+    {"@type":"Question","name":"Perplexityは日本語に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"はい。日本語の質問にも自然な日本語で回答してくれます。"}},
+    {"@type":"Question","name":"Perplexityは何ができますか？","acceptedAnswer":{"@type":"Answer","text":"調べもの、最新情報の検索、要約、比較検討など幅広い用途に使えます。"}},
+    {"@type":"Question","name":"Perplexityにできないことはありますか？","acceptedAnswer":{"@type":"Answer","text":"感情を持って判断することはできず、回答に誤りが含まれる可能性もあります。重要な内容は出典を確認しましょう。"}},
+    {"@type":"Question","name":"Perplexityを使うのに専門知識は必要ですか？","acceptedAnswer":{"@type":"Answer","text":"不要です。話しかけるように質問するだけで使えるため、初心者でも問題ありません。"}},
+    {"@type":"Question","name":"Perplexityは出典を確認できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。回答の下に情報源（リンク）が表示されるため、自分で内容を確認できます。"}},
+    {"@type":"Question","name":"Perplexityで調べた内容は商用利用できますか？","acceptedAnswer":{"@type":"Answer","text":"多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。"}},
+    {"@type":"Question","name":"Perplexityはどんな仕組みで回答していますか？","acceptedAnswer":{"@type":"Answer","text":"入力された質問に対してWeb上の情報を検索し、内容を整理・要約して、出典つきの回答を表示しています。"}},
+    {"@type":"Question","name":"Perplexityを使うと調べる時間は短縮できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。複数のサイトを自分で探す手間が減り、調べる時間を大幅に短縮できるケースが多いです。"}},
+    {"@type":"Question","name":"Perplexityを使い始めるにはどうすればいいですか？","acceptedAnswer":{"@type":"Answer","text":"公式サイトやアプリからアカウントを登録するだけで、すぐに使い始めることができます。"}}
   ]
 }
 </script>
-
-<style>
-:root{
-  --ink:#0B1426;
-  --ink2:#3D4F6A;
-  --ink3:#7A8C9E;
-  --bg:#F8F9FC;
-  --surface:#FFFFFF;
-  --navy:#0B1426;
-  --navy-mid:#1A2E4A;
-  --emerald:#00C896;
-  --emerald-dim:#00C89620;
-  --emerald-light:#E6FAF5;
-  --purple:#6C63FF;
-  --purple-light:#F0EFFF;
-  --amber:#F5A623;
-  --amber-light:#FEF6E7;
-  --red:#E5484D;
-  --red-light:#FDECEC;
-  --border:rgba(11,20,38,0.09);
-  --r:10px;
-  --r-lg:18px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
-
-/* ── HEADER（トップページと共通） ── */
-.header{background:var(--navy);position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 1px 0 rgba(0,200,150,0.15)}
-.logo{font-family:'Zen Kaku Gothic New',sans-serif;font-size:19px;font-weight:900;color:#fff;letter-spacing:-0.02em;text-decoration:none;display:flex;align-items:center;gap:6px}
-.logo-mark{width:26px;height:26px;background:var(--emerald);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
-.logo span{color:var(--emerald)}
-.header-nav{margin-left:auto;display:flex;gap:2px;align-items:center}
-.nav-link{color:rgba(255,255,255,0.65);font-size:13px;text-decoration:none;padding:6px 11px;border-radius:7px;transition:background .15s}
-.nav-link:hover{background:rgba(255,255,255,0.09);color:#fff}
-
-.container{max-width:760px;margin:0 auto;padding:0 24px}
-
-/* ── パンくず ── */
-.breadcrumb{font-size:12px;color:var(--ink3);padding:16px 0 0}
-.breadcrumb a{color:var(--ink3);text-decoration:none}
-.breadcrumb a:hover{color:var(--emerald)}
-
-/* ── 記事ヘッダー ── */
-.article-header{padding:20px 0 28px}
-.category-badge{display:inline-block;background:var(--emerald-light);color:#005740;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
-.article-h1{font-family:'Zen Kaku Gothic New',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:900;color:var(--ink);line-height:1.3;letter-spacing:-0.02em;margin-bottom:14px}
-.article-subcopy{display:inline-block;background:var(--amber-light);color:#7A4D00;font-size:14px;font-weight:700;padding:8px 16px;border-radius:8px;line-height:1.6}
-
-/* ── 図解画像（主役） ── */
-.zukai-wrap{text-align:center;margin:28px 0}
-.zukai-wrap img{max-width:600px;width:100%;height:auto;display:block;margin:0 auto;border-radius:var(--r-lg);box-shadow:0 12px 40px rgba(11,20,38,0.12);border:1px solid var(--border)}
-
-/* ── 保存版バナー ── */
-.save-banner{background:var(--navy);color:#fff;font-size:13px;font-weight:700;text-align:center;padding:10px 16px;border-radius:var(--r);margin:20px 0;display:flex;align-items:center;justify-content:center;gap:8px}
-.save-banner .pin{color:var(--emerald)}
-
-/* ── 一言結論ボックス ── */
-.conclusion-box{background:var(--emerald-light);border:1px solid rgba(0,200,150,0.3);border-radius:var(--r-lg);padding:18px 22px;margin:20px 0;font-size:15px;font-weight:700;color:#005740;line-height:1.7}
-
-/* ── 3行要約ボックス ── */
-.summary-box{background:var(--navy);border-radius:var(--r-lg);padding:22px 24px;margin:20px 0 36px}
-.summary-box-title{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:12px;text-transform:uppercase}
-.summary-row{display:flex;gap:10px;color:rgba(255,255,255,0.88);font-size:14px;line-height:1.7;margin-bottom:8px}
-.summary-row:last-child{margin-bottom:0}
-.summary-num{color:var(--emerald);font-weight:900;flex-shrink:0}
-
-/* ── 基本情報テーブル ── */
-.compare-table{width:100%;border-collapse:collapse;margin:28px 0 36px;font-size:14px;background:var(--surface);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 4px 16px rgba(11,20,38,0.06)}
-.compare-table caption{background:var(--navy);color:#fff;font-weight:900;font-size:15px;padding:14px;font-family:'Zen Kaku Gothic New',sans-serif}
-.compare-table th,.compare-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border)}
-.compare-table th{background:var(--navy-mid);color:#fff;font-weight:700;width:32%}
-.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:none}
-.compare-table td{color:var(--ink2)}
-.compare-table a{color:var(--emerald);font-weight:700;text-decoration:none}
-.compare-table a:hover{text-decoration:underline}
-
-/* ── 本文セクション ── */
-.content-section{margin:40px 0}
-.content-h2{font-family:'Zen Kaku Gothic New',sans-serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:14px;padding-left:14px;border-left:4px solid var(--emerald)}
-.content-h3{font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;font-weight:900;color:var(--ink2);margin:22px 0 10px;padding-left:12px;border-left:3px solid var(--amber)}
-.content-section p{font-size:15px;color:var(--ink2);line-height:1.9;margin-bottom:14px}
-
-/* ── FAQ アコーディオン ── */
-.faq-list{display:flex;flex-direction:column;gap:10px;margin:20px 0 40px}
-.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
-.faq-item summary{padding:16px 18px;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:10px;list-style:none}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::before{content:'Q';flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--emerald);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center}
-.faq-item[open] summary::before{background:var(--navy)}
-.faq-answer{padding:0 18px 16px 50px;font-size:13.5px;color:var(--ink2);line-height:1.8}
-
-/* ── 末尾CTA（1本のみ） ── */
-.final-cta{background:linear-gradient(140deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:var(--r-lg);padding:32px 26px;margin:40px 0;text-align:center}
-.final-cta-eyebrow{color:var(--emerald);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:10px;text-transform:uppercase}
-.final-cta-title{font-family:'Zen Kaku Gothic New',sans-serif;color:#fff;font-size:18px;font-weight:900;margin-bottom:20px;line-height:1.5}
-.final-cta-list{display:flex;flex-direction:column;gap:8px}
-.final-cta-link{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;padding:13px 18px;border-radius:var(--r);text-align:left;display:flex;align-items:center;justify-content:space-between;transition:background .15s}
-.final-cta-link:hover{background:rgba(0,200,150,0.18);border-color:var(--emerald)}
-.final-cta-link.primary{background:var(--emerald);color:var(--navy);border-color:var(--emerald)}
-.final-cta-link.primary:hover{opacity:.9}
-
-/* ── フッター ── */
-.footer{background:var(--navy);padding:32px 24px;text-align:center;margin-top:48px}
-.footer-text{color:rgba(255,255,255,0.4);font-size:12px}
-.footer-links{display:flex;gap:16px;justify-content:center;margin-bottom:14px}
-.footer-links a{color:rgba(255,255,255,0.6);font-size:12px;text-decoration:none}
-
-@media(max-width:480px){
-  .article-header{padding:16px 0 22px}
-  .compare-table{font-size:12.5px}
-  .compare-table th,.compare-table td{padding:10px 10px}
-  .compare-table th{width:36%}
-}
-</style>
 </head>
 <body>
-
-<!-- ヘッダー -->
 <header class="header">
-  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<span>図解</span>ラボ</a>
+  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<em>図解</em>ラボ</a>
   <nav class="header-nav">
     <a href="/ai/" class="nav-link">AI</a>
-    <a href="/efficiency/" class="nav-link">業務効率化</a>
-    <a href="/compare/" class="nav-link">比較</a>
   </nav>
 </header>
-
 <div class="container">
-
-  <!-- パンくず -->
   <nav class="breadcrumb">
     <a href="/">ホーム</a> &gt; <a href="/ai/">AI</a> &gt; Perplexityとは？
   </nav>
-
-  <!-- 記事ヘッダー -->
   <article>
     <header class="article-header">
-      <span class="category-badge">AI・生成AI</span>
+      <span class="category-badge">図 04 ｜ AI・生成AI</span>
       <h1 class="article-h1">Perplexityとは？</h1>
       <p class="article-subcopy">【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説</p>
+      <time class="pubdate" datetime="2026-06-20">📅 公開：2026年6月20日 ／ 更新：2026年7月17日</time>
     </header>
-
-    <!-- 図解画像（主役） -->
     <div class="zukai-wrap">
       <img src="/images/perplexity-zukai-explanation.png"
            alt="Perplexityの仕組みを図解したイラスト。定義・仕組み・メリット・活用例・注意点・まとめの6項目を解説"
            width="1080" height="1350" loading="eager">
     </div>
-
-    <!-- 保存版バナー -->
     <div class="save-banner"><span class="pin">📌</span> 保存版｜あとで見返したい人はブックマーク推奨</div>
-
-    <!-- 一言結論ボックス -->
     <div class="conclusion-box">
       Perplexityとは、AIがWeb上の情報を調べて、根拠（出典）つきで答えてくれる検索エンジン。回答の下に情報源が表示されるため、自分で内容を確認できる点が特徴です。
     </div>
-
-    <!-- 3行要約ボックス -->
     <div class="summary-box">
       <div class="summary-box-title">30秒でわかる要約</div>
       <div class="summary-row"><span class="summary-num">①</span>PerplexityはAIが検索・要約してくれる検索エンジン</div>
       <div class="summary-row"><span class="summary-num">②</span>回答には必ず出典（リンク）が表示される</div>
       <div class="summary-row"><span class="summary-num">③</span>調べもの・リサーチ・比較検討に使える</div>
     </div>
-
-    <!-- 基本情報テーブル -->
     <table class="compare-table">
       <caption>Perplexity 基本情報</caption>
       <tbody>
@@ -256,22 +119,22 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
         <tr><th>おすすめ用途</th><td>調べもの、リサーチ、比較検討、最新情報の収集</td></tr>
       </tbody>
     </table>
-
-    <!-- ①定義 -->
+    <!-- ▼ すぐ古くなる情報（プラン名・料金・モデル名）はここに隔離する。更新はこのブロックだけでよい -->
+    <div class="volatile-box">
+      <span class="volatile-head">最新情報｜2026年7月17日時点</span>
+      料金プランや使えるモデルは頻繁に変わります。現在のプラン構成・価格・利用できるモデルは、
+      <a href="https://www.perplexity.ai" rel="nofollow noopener" target="_blank">公式サイト</a>で必ずご確認ください。
+    </div>
     <section class="content-section">
       <h2 class="content-h2">Perplexityとは（定義）</h2>
       <p>Perplexityとは、AIがWeb上の情報を調べて、根拠（出典）つきで答えてくれる検索エンジンです。チャット画面に質問を入力するだけで、AIが最新の情報を検索し、自然な文章でわかりやすく回答してくれます。</p>
       <p>回答の下には情報源となったリンクが表示されるため、自分で内容を確認できる点が大きな特徴です。Googleのキーワード検索とは違い、「質問への答え」をそのまま受け取れるのが、Perplexityの基本的な使い方です。</p>
     </section>
-
-    <!-- ②仕組み -->
     <section class="content-section">
       <h2 class="content-h2">Perplexityの仕組み</h2>
       <p>Perplexityは、質問を入力すると、まずWeb上の最新情報をリアルタイムで検索します。その後、見つかった情報を整理・要約し、根拠（出典）つきで回答として表示する、という流れで動いています。</p>
       <p>学習済みの知識だけに頼るのではなく、その都度Web検索を行うことで、最新の情報を反映した回答が得られる点が特徴です。回答の下に表示される出典を確認すれば、AIの回答が何をもとにしているかを自分でチェックできます。</p>
     </section>
-
-    <!-- ③できること／できないこと -->
     <section class="content-section">
       <h2 class="content-h2">Perplexityでできること</h2>
       <p>Perplexityは機能ベースで見ると、主に次のようなことができます。</p>
@@ -279,15 +142,12 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
       <strong>仕事・資料作り：</strong>データ収集やアイデア出しに活用できます。<br>
       <strong>比較検討：</strong>商品やサービスの違いを比較できます。<br>
       <strong>知識の整理：</strong>難しい内容もわかりやすく整理してくれます。</p>
-
       <h3 class="content-h3">Perplexityでできないこと</h3>
       <p>一方で、次のようなことには対応できない、または注意が必要です。<br>
       <strong>感情を持った判断：</strong>人間のように感情や責任を持って物事を判断することはできません。<br>
       <strong>100％正確な保証：</strong>出典が示されていても、内容に誤りが含まれる可能性があるため、重要な情報は自分でも確認が必要です。<br>
       <strong>高度な文章生成・コード作成：</strong>長文の創作や複雑なプログラム開発は、得意分野ではありません。</p>
     </section>
-
-    <!-- ④活用例 -->
     <section class="content-section">
       <h2 class="content-h2">Perplexityの活用例</h2>
       <p>実際にどんな人がどう使っているか、人物別に見てみましょう。</p>
@@ -297,8 +157,6 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
       <strong>買い物前に比較したい人：</strong>商品やサービスの比較検討に活用されています。<br>
       <strong>調べもの好きな人：</strong>難しい内容の知識整理に使われています。</p>
     </section>
-
-    <!-- ⑤注意点 -->
     <section class="content-section">
       <h2 class="content-h2">Perplexityの注意点</h2>
       <p>便利な一方で、使う際に知っておきたい注意点もあります。</p>
@@ -307,87 +165,54 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink)
       <strong>③回答の検証を行う：</strong>重要な情報は自分でも確認しましょう。<br>
       <strong>④著作権に注意する：</strong>調べた内容を引用や転載する際は、ルールを守りましょう。</p>
     </section>
-
-    <!-- ⑥まとめ -->
     <section class="content-section">
       <h2 class="content-h2">まとめ</h2>
       <p>Perplexityは、最新情報を素早く調べられる身近なAI検索ツールです。根拠（出典）つきで回答してくれるため、信頼しやすい点が大きな強みです。出典の確認や個人情報の保護といった注意点を守りながら使うことで、調べる・まとめる・理解するをサポートしてくれる頼れる相棒として役立てることができます。</p>
     </section>
-
-    <!-- FAQ 15問 -->
     <section class="content-section">
       <h2 class="content-h2">よくある質問</h2>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary>Perplexityとは何ですか？</summary>
-          <p class="faq-answer">Perplexityは、AIがWeb上の情報を調べて、出典（根拠）つきで回答してくれる検索エンジンです。質問を入力するだけで、最新の情報をもとに答えてくれます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityは無料で使えますか？</summary>
-          <p class="faq-answer">無料プランがあり、基本的な機能は無料で利用できます。より高度な機能を使いたい場合は有料プランが用意されています。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityにはどんな種類がありますか？</summary>
-          <p class="faq-answer">無料版のほか、個人向け・法人向けなど用途に応じたプランがあります。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityの回答は必ず正しいですか？</summary>
-          <p class="faq-answer">いいえ。AIの回答は間違っていることもあるため、表示される出典を確認することが大切です。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityに個人情報を入力しても大丈夫ですか？</summary>
-          <p class="faq-answer">名前・住所・電話番号などの個人情報は入力しないことをおすすめします。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityはスマホでも使えますか？</summary>
-          <p class="faq-answer">はい。公式アプリやブラウザから、スマホでも問題なく利用できます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityは日本語に対応していますか？</summary>
-          <p class="faq-answer">はい。日本語の質問にも自然な日本語で回答してくれます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityは何ができますか？</summary>
-          <p class="faq-answer">調べもの、最新情報の検索、要約、比較検討など幅広い用途に使えます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityにできないことはありますか？</summary>
-          <p class="faq-answer">感情を持って判断することはできず、回答に誤りが含まれる可能性もあります。重要な内容は出典を確認しましょう。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityを使うのに専門知識は必要ですか？</summary>
-          <p class="faq-answer">不要です。話しかけるように質問するだけで使えるため、初心者でも問題ありません。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityは出典を確認できますか？</summary>
-          <p class="faq-answer">はい。回答の下に情報源（リンク）が表示されるため、自分で内容を確認できます。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityで調べた内容は商用利用できますか？</summary>
-          <p class="faq-answer">多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityはどんな仕組みで回答していますか？</summary>
-          <p class="faq-answer">入力された質問に対してWeb上の情報を検索し、内容を整理・要約して、出典つきの回答を表示しています。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityを使うと調べる時間は短縮できますか？</summary>
-          <p class="faq-answer">はい。複数のサイトを自分で探す手間が減り、調べる時間を大幅に短縮できるケースが多いです。</p>
-        </details>
-        <details class="faq-item">
-          <summary>Perplexityを使い始めるにはどうすればいいですか？</summary>
-          <p class="faq-answer">公式サイトやアプリからアカウントを登録するだけで、すぐに使い始めることができます。</p>
-        </details>
+        <details class="faq-item"><summary>Perplexityとは何ですか？</summary><p class="faq-answer">Perplexityは、AIがWeb上の情報を調べて、出典（根拠）つきで回答してくれる検索エンジンです。質問を入力するだけで、最新の情報をもとに答えてくれます。</p></details>
+        <details class="faq-item"><summary>Perplexityは無料で使えますか？</summary><p class="faq-answer">無料プランがあり、基本的な機能は無料で利用できます。より高度な機能を使いたい場合は有料プランが用意されています。</p></details>
+        <details class="faq-item"><summary>Perplexityにはどんな種類がありますか？</summary><p class="faq-answer">無料版のほか、個人向け・法人向けなど用途に応じたプランがあります。</p></details>
+        <details class="faq-item"><summary>Perplexityの回答は必ず正しいですか？</summary><p class="faq-answer">いいえ。AIの回答は間違っていることもあるため、表示される出典を確認することが大切です。</p></details>
+        <details class="faq-item"><summary>Perplexityに個人情報を入力しても大丈夫ですか？</summary><p class="faq-answer">名前・住所・電話番号などの個人情報は入力しないことをおすすめします。</p></details>
+        <details class="faq-item"><summary>Perplexityはスマホでも使えますか？</summary><p class="faq-answer">はい。公式アプリやブラウザから、スマホでも問題なく利用できます。</p></details>
+        <details class="faq-item"><summary>Perplexityは日本語に対応していますか？</summary><p class="faq-answer">はい。日本語の質問にも自然な日本語で回答してくれます。</p></details>
+        <details class="faq-item"><summary>Perplexityは何ができますか？</summary><p class="faq-answer">調べもの、最新情報の検索、要約、比較検討など幅広い用途に使えます。</p></details>
+        <details class="faq-item"><summary>Perplexityにできないことはありますか？</summary><p class="faq-answer">感情を持って判断することはできず、回答に誤りが含まれる可能性もあります。重要な内容は出典を確認しましょう。</p></details>
+        <details class="faq-item"><summary>Perplexityを使うのに専門知識は必要ですか？</summary><p class="faq-answer">不要です。話しかけるように質問するだけで使えるため、初心者でも問題ありません。</p></details>
+        <details class="faq-item"><summary>Perplexityは出典を確認できますか？</summary><p class="faq-answer">はい。回答の下に情報源（リンク）が表示されるため、自分で内容を確認できます。</p></details>
+        <details class="faq-item"><summary>Perplexityで調べた内容は商用利用できますか？</summary><p class="faq-answer">多くの場合可能ですが、著作権や利用規約には注意が必要です。最終的な利用判断は自分で行いましょう。</p></details>
+        <details class="faq-item"><summary>Perplexityはどんな仕組みで回答していますか？</summary><p class="faq-answer">入力された質問に対してWeb上の情報を検索し、内容を整理・要約して、出典つきの回答を表示しています。</p></details>
+        <details class="faq-item"><summary>Perplexityを使うと調べる時間は短縮できますか？</summary><p class="faq-answer">はい。複数のサイトを自分で探す手間が減り、調べる時間を大幅に短縮できるケースが多いです。</p></details>
+        <details class="faq-item"><summary>Perplexityを使い始めるにはどうすればいいですか？</summary><p class="faq-answer">公式サイトやアプリからアカウントを登録するだけで、すぐに使い始めることができます。</p></details>
       </div>
     </section>
-
+    <!-- 末尾CTA：実在する記事だけにリンクする -->
+    <div class="final-cta">
+      <div class="final-cta-eyebrow">次に読むなら</div>
+      <div class="final-cta-title">ほかのAIとも比べてみる</div>
+      <div class="final-cta-list">
+        <a href="/ai/chatgpt/" class="final-cta-link primary">ChatGPTとは？を読む <span>→</span></a>
+        <a href="/ai/gemini/" class="final-cta-link">Geminiとは？を読む <span>→</span></a>
+        <a href="/ai/" class="final-cta-link">AIツール一覧を見る <span>→</span></a>
+      </div>
+    </div>
   </article>
 </div>
-
-<!-- フッター -->
 <footer class="footer">
-  <p class="footer-text">© 2026 AI図解ラボ</p>
+  <div class="footer-inner">
+    <p class="disclosure">
+      当サイトはアフィリエイトプログラムに参加しており、記事内のリンクから商品・サービスの申込があった場合、運営者が紹介料を受け取ることがあります。掲載内容は執筆時点の情報にもとづきます。最新の仕様・料金は各公式サイトをご確認ください。
+    </p>
+    <nav class="footer-links">
+      <a href="/">トップ</a>
+      <a href="/ai/">AIツール一覧</a>
+      <a href="/disclaimer/">免責事項・プライバシーポリシー</a>
+    </nav>
+    <p class="footer-text">© 2026 AI図解ラボ</p>
+  </div>
 </footer>
-
 </body>
 </html>
