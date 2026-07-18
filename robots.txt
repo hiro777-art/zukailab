@@ -1,4 +1,58 @@
+# robots.txt — AI図解ラボ (https://zukailab.com/)
+#
+# 方針
+#  - 通常の検索インデックス（Googlebot 等）：許可
+#  - AI回答での引用・リアルタイム参照（ai-input）：許可 → AIアシスタントに引用されたい
+#  - AIモデルの学習（ai-train）：拒否 → 学習素材としての利用は断る
+#
+# ※ Content-Signal は宣言的な意思表示。ボット名は変わりうるため、
+#    個別 User-agent 指定と併用して二重に担保しています。
+# ※ robots.txt は良識あるクローラーが尊重する仕組みで、無視する
+#    スクレイパーには効きません（これは仕様上の限界です）。
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+# --- 学習・データセット収集を主目的とするクローラーはブロック ---
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# --- AI回答での「検索・引用・ユーザー要求の閲覧」用は許可（明示） ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 Sitemap: https://zukailab.com/sitemap.xml
