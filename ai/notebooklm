@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NotebookLMとは？【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説 | AI図解ラボ</title>
+<meta name="description" content="NotebookLMとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+<link rel="canonical" href="https://zukailab.com/ai/notebooklm/">
+<!-- OGP -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI図解ラボ">
+<meta property="og:title" content="NotebookLMとは？【30秒でわかる図解】 | AI図解ラボ">
+<meta property="og:description" content="NotebookLMとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。">
+<meta property="og:url" content="https://zukailab.com/ai/notebooklm/">
+<meta property="og:image" content="https://zukailab.com/images/notebooklm-zukai-explanation.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<!-- 構造化データ：Article -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"NotebookLMとは？仕組み・できること・使い方を初心者向け解説",
+  "image":"https://zukailab.com/images/notebooklm-zukai-explanation.png",
+  "author":{"@type":"Person","name":"Hiro","url":"https://zukailab.com/#person"},
+  "publisher":{"@type":"Organization","name":"AI図解ラボ","logo":{"@type":"ImageObject","url":"https://zukailab.com/images/logo.png"}},
+  "datePublished":"2026-07-18",
+  "dateModified":"2026-07-18",
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://zukailab.com/ai/notebooklm/"},
+  "description":"NotebookLMとは何か、図解で30秒でわかる解説。仕組み・できること・活用例・注意点まで初心者向けにやさしく説明します。"
+}
+</script>
+<!-- 構造化データ：BreadcrumbList（/ai/ は実在ページ） -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"ホーム","item":"https://zukailab.com/"},
+    {"@type":"ListItem","position":2,"name":"AI","item":"https://zukailab.com/ai/"},
+    {"@type":"ListItem","position":3,"name":"NotebookLMとは？"}
+  ]
+}
+</script>
+<!-- 構造化データ：FAQPage（本文と完全一致） -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"NotebookLMとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"NotebookLMは、Googleが提供する資料ベースのAIツールです。自分がアップロードした資料をもとに、要約や質問への回答を行ってくれます。"}},
+    {"@type":"Question","name":"NotebookLMは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。Googleアカウントがあれば基本機能を無料で利用できます。より高い上限や追加機能を使いたい場合は、Googleの有料プランが用意されています。"}},
+    {"@type":"Question","name":"NotebookLMにはどんな機能がありますか？","acceptedAnswer":{"@type":"Answer","text":"資料の要約、質問への回答、音声概要（ポッドキャスト風の解説）、マインドマップや学習ガイドの作成などの機能があります。"}},
+    {"@type":"Question","name":"NotebookLMの回答は必ず正しいですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。アップロードした資料をもとに回答しますが、解釈に誤りが含まれる可能性もあるため、重要な内容は自分で確認することが大切です。"}},
+    {"@type":"Question","name":"NotebookLMにはどんな資料をアップロードできますか？","acceptedAnswer":{"@type":"Answer","text":"PDFやテキスト、Googleドキュメント、Webサイトのリンクなど、さまざまな形式の資料を読み込ませることができます。"}},
+    {"@type":"Question","name":"NotebookLMはスマホでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。ブラウザや公式アプリから、スマホでも利用できます。"}},
+    {"@type":"Question","name":"NotebookLMは日本語に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"はい。日本語の資料の読み込みや、日本語での質問・回答に対応しています。"}},
+    {"@type":"Question","name":"NotebookLMは何ができますか？","acceptedAnswer":{"@type":"Answer","text":"資料の要約、内容についての質問、音声概要の作成、学習ガイドの生成などに使えます。"}},
+    {"@type":"Question","name":"音声概要（Audio Overview）とは何ですか？","acceptedAnswer":{"@type":"Answer","text":"アップロードした資料をもとに、二人の話者が会話するポッドキャスト風の音声を自動生成する機能です。移動中などに耳で内容を把握できます。"}},
+    {"@type":"Question","name":"NotebookLMを使うのに専門知識は必要ですか？","acceptedAnswer":{"@type":"Answer","text":"不要です。資料をアップロードして質問するだけで使えるため、初心者でも問題ありません。"}},
+    {"@type":"Question","name":"NotebookLMは他のAIチャットと何が違いますか？","acceptedAnswer":{"@type":"Answer","text":"ChatGPTのような単体のAIチャットと異なり、自分がアップロードした資料の内容だけをもとに回答してくれる点が大きな違いです。"}},
+    {"@type":"Question","name":"NotebookLMに個人情報を入力しても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"機密情報や他人の個人情報の取り扱いには注意が必要です。利用前にプライバシーポリシーを確認しましょう。"}},
+    {"@type":"Question","name":"NotebookLMはどんな仕組みで回答していますか？","acceptedAnswer":{"@type":"Answer","text":"アップロードされた資料をAIが読み込み、その内容をもとに質問に合った回答や要約を生成しています。"}},
+    {"@type":"Question","name":"NotebookLMを使うと作業時間は短縮できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。大量の資料を読み込む時間や、要点を整理する手間を大きく短縮できるケースが多いです。"}},
+    {"@type":"Question","name":"NotebookLMを使い始めるにはどうすればいいですか？","acceptedAnswer":{"@type":"Answer","text":"Googleアカウントでログインし、資料をアップロードするだけで、すぐに使い始めることができます。"}}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="header">
+  <a href="/" class="logo"><span class="logo-mark">📊</span>AI<em>図解</em>ラボ</a>
+  <nav class="header-nav">
+    <a href="/ai/" class="nav-link">AI</a>
+  </nav>
+</header>
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="/">ホーム</a> &gt; <a href="/ai/">AI</a> &gt; NotebookLMとは？
+  </nav>
+  <article>
+    <header class="article-header">
+      <span class="category-badge">図 09 ｜ AI・生成AI</span>
+      <h1 class="article-h1">NotebookLMとは？</h1>
+      <p class="article-subcopy">【30秒でわかる図解】仕組み・できること・使い方を初心者向け解説</p>
+      <time class="pubdate" datetime="2026-07-18">📅 公開：2026年7月18日 ／ 更新：2026年7月18日</time>
+    </header>
+    <div class="zukai-wrap">
+      <img src="/images/notebooklm-zukai-explanation.png"
+           alt="NotebookLMの仕組みを図解したイラスト。定義・仕組み・メリット・活用例・注意点・まとめの6項目を解説"
+           width="1080" height="1350" loading="eager">
+    </div>
+    <div class="save-banner"><span class="pin">📌</span> 保存版｜あとで見返したい人はブックマーク推奨</div>
+    <div class="conclusion-box">
+      NotebookLMとは、自分がアップロードした資料をもとに答えてくれるGoogleのAIツール。要約や質問回答に加え、ポッドキャスト風の音声概要も作れるのが特徴です。
+    </div>
+    <div class="summary-box">
+      <div class="summary-box-title">30秒でわかる要約</div>
+      <div class="summary-row"><span class="summary-num">①</span>NotebookLMはGoogleが提供する資料ベースのAI</div>
+      <div class="summary-row"><span class="summary-num">②</span>アップした資料だけをもとに要約・回答してくれる</div>
+      <div class="summary-row"><span class="summary-num">③</span>音声概要で耳から内容を把握できる</div>
+    </div>
+    <table class="compare-table">
+      <caption>NotebookLM 基本情報</caption>
+      <tbody>
+        <tr><th>サービス名</th><td>NotebookLM</td></tr>
+        <tr><th>開発元</th><td>Google</td></tr>
+        <tr><th>料金</th><td>無料で利用可能（上位プランは有料。詳細は下の「最新情報」を参照）</td></tr>
+        <tr><th>対応言語</th><td>日本語を含む多言語に対応</td></tr>
+        <tr><th>主な機能</th><td>資料の要約、質問への回答、音声概要、マインドマップ・学習ガイド作成</td></tr>
+        <tr><th>画像生成</th><td>×（資料の理解・整理に特化）</td></tr>
+        <tr><th>コード作成</th><td>×（画像・コード生成には非対応）</td></tr>
+        <tr><th>スマホ利用</th><td>○（ブラウザ・公式アプリ）</td></tr>
+        <tr><th>Webサイト</th><td><a href="https://notebooklm.google" rel="nofollow noopener" target="_blank">https://notebooklm.google</a></td></tr>
+        <tr><th>セキュリティ・プライバシー</th><td>Googleのプライバシーポリシーに準拠</td></tr>
+        <tr><th>おすすめ用途</th><td>資料の要約・理解、リサーチ、学習、議事録の整理</td></tr>
+      </tbody>
+    </table>
+    <!-- ▼ すぐ古くなる情報（プラン名・料金・モデル名）はここに隔離する。更新はこのブロックだけでよい -->
+    <div class="volatile-box">
+      <span class="volatile-head">最新情報｜2026年7月18日時点</span>
+      NotebookLMはGoogleアカウントがあれば無料で使えます。ノート数・ソース数・1日の生成回数などの上限を引き上げる有料プラン（Google AIのサブスクリプション）も用意されています。料金プランや使えるモデル・上限は頻繁に変わるため、最新は
+      <a href="https://notebooklm.google" rel="nofollow noopener" target="_blank">公式サイト</a>で必ずご確認ください。
+    </div>
+    <section class="content-section">
+      <h2 class="content-h2">NotebookLMとは（定義）</h2>
+      <p>NotebookLMとは、Googleが提供する「資料ベース」のAIツールです。自分がアップロードしたPDFやドキュメント、Webページなどを読み込ませると、その資料の内容だけをもとに要約や質問への回答を行ってくれます。</p>
+      <p>一般的なAIチャットが幅広い知識から答えるのに対し、NotebookLMは「手元の資料」に絞って回答するため、出どころのはっきりした答えが得やすい点が特徴です。調べもの・学習・資料整理を助けてくれる、パーソナルな研究アシスタントのような存在です。</p>
+    </section>
+    <section class="content-section">
+      <h2 class="content-h2">NotebookLMの仕組み</h2>
+      <p>NotebookLMは、まず自分の資料をアップロードするところから始まります。次にAIがその資料を読み込み、内容を理解します。そのうえで質問を入力すると、資料の記述にもとづいた回答や要約を生成して表示する、という流れで動いています。</p>
+      <p>インターネット全体ではなく「読み込ませた資料」を根拠にする点が大きな特徴です。回答が資料のどこにもとづくかを確認できるため、内容のチェックがしやすくなっています。</p>
+    </section>
+    <section class="content-section">
+      <h2 class="content-h2">NotebookLMでできること</h2>
+      <p>NotebookLMは機能ベースで見ると、主に次のようなことができます。</p>
+      <p><strong>資料の要約：</strong>長いPDFや複数の資料の要点を短くまとめてくれます。<br>
+      <strong>資料への質問：</strong>「この資料の結論は？」のように内容を質問できます。<br>
+      <strong>音声概要：</strong>資料をもとにポッドキャスト風の音声解説を自動生成できます。<br>
+      <strong>学習ガイド作成：</strong>マインドマップや学習ガイドなど、理解を助ける形に整理してくれます。</p>
+      <h3 class="content-h3">NotebookLMでできないこと</h3>
+      <p>一方で、次のようなことには対応できない、または注意が必要です。<br>
+      <strong>画像・コード生成：</strong>資料の理解・整理に特化しており、画像生成や本格的なプログラミング支援には向いていません。<br>
+      <strong>資料の外にある知識：</strong>アップロードしていない情報については、原則として答えられません。<br>
+      <strong>100％正確な保証：</strong>資料の解釈に誤りが含まれる可能性があるため、重要な内容は自分でも確認が必要です。</p>
+    </section>
+    <section class="content-section">
+      <h2 class="content-h2">NotebookLMの活用例</h2>
+      <p>実際にどんな人がどう使っているか、人物別に見てみましょう。</p>
+      <p><strong>学生：</strong>教科書や論文を読み込ませ、要点整理や試験対策に活用されています。<br>
+      <strong>会社員：</strong>長い会議資料やマニュアルの要約・質問に使われています。<br>
+      <strong>研究者・ライター：</strong>複数の資料を横断して調べる際の下調べに活用されています。<br>
+      <strong>士業・専門職：</strong>契約書や規程などの内容確認の補助に使われています。<br>
+      <strong>通勤・通学中の人：</strong>音声概要で資料を「耳から」インプットするのに使われています。</p>
+    </section>
+    <section class="content-section">
+      <h2 class="content-h2">NotebookLMの注意点</h2>
+      <p>便利な一方で、使う際に知っておきたい注意点もあります。</p>
+      <p><strong>①情報は確認する：</strong>資料の解釈が間違っている場合もあるため、重要な内容は自分で確認しましょう。<br>
+      <strong>②機密情報の取り扱い：</strong>機密資料や他人の個人情報をアップロードする際は、社内ルールや規約を確認しましょう。<br>
+      <strong>③資料の質に左右される：</strong>読み込ませた資料が不正確だと、回答も不正確になります。<br>
+      <strong>④著作権に注意する：</strong>他者の資料を扱う場合は、著作権や利用ルールを守りましょう。</p>
+    </section>
+    <section class="content-section">
+      <h2 class="content-h2">まとめ</h2>
+      <p>NotebookLMは、自分の資料をもとに答えてくれる身近なAIツールです。要約・質問・音声概要といった機能で、調べる・理解する・覚えるをまとめてサポートしてくれます。資料の確認や機密情報の扱いといった注意点を守りながら使うことで、学習や仕事の「読む・まとめる」時間を大きく減らしてくれる頼れるパートナーになってくれるはずです。</p>
+    </section>
+    <section class="content-section">
+      <h2 class="content-h2">よくある質問</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>NotebookLMとは何ですか？</summary><p class="faq-answer">NotebookLMは、Googleが提供する資料ベースのAIツールです。自分がアップロードした資料をもとに、要約や質問への回答を行ってくれます。</p></details>
+        <details class="faq-item"><summary>NotebookLMは無料で使えますか？</summary><p class="faq-answer">はい。Googleアカウントがあれば基本機能を無料で利用できます。より高い上限や追加機能を使いたい場合は、Googleの有料プランが用意されています。</p></details>
+        <details class="faq-item"><summary>NotebookLMにはどんな機能がありますか？</summary><p class="faq-answer">資料の要約、質問への回答、音声概要（ポッドキャスト風の解説）、マインドマップや学習ガイドの作成などの機能があります。</p></details>
+        <details class="faq-item"><summary>NotebookLMの回答は必ず正しいですか？</summary><p class="faq-answer">いいえ。アップロードした資料をもとに回答しますが、解釈に誤りが含まれる可能性もあるため、重要な内容は自分で確認することが大切です。</p></details>
+        <details class="faq-item"><summary>NotebookLMにはどんな資料をアップロードできますか？</summary><p class="faq-answer">PDFやテキスト、Googleドキュメント、Webサイトのリンクなど、さまざまな形式の資料を読み込ませることができます。</p></details>
+        <details class="faq-item"><summary>NotebookLMはスマホでも使えますか？</summary><p class="faq-answer">はい。ブラウザや公式アプリから、スマホでも利用できます。</p></details>
+        <details class="faq-item"><summary>NotebookLMは日本語に対応していますか？</summary><p class="faq-answer">はい。日本語の資料の読み込みや、日本語での質問・回答に対応しています。</p></details>
+        <details class="faq-item"><summary>NotebookLMは何ができますか？</summary><p class="faq-answer">資料の要約、内容についての質問、音声概要の作成、学習ガイドの生成などに使えます。</p></details>
+        <details class="faq-item"><summary>音声概要（Audio Overview）とは何ですか？</summary><p class="faq-answer">アップロードした資料をもとに、二人の話者が会話するポッドキャスト風の音声を自動生成する機能です。移動中などに耳で内容を把握できます。</p></details>
+        <details class="faq-item"><summary>NotebookLMを使うのに専門知識は必要ですか？</summary><p class="faq-answer">不要です。資料をアップロードして質問するだけで使えるため、初心者でも問題ありません。</p></details>
+        <details class="faq-item"><summary>NotebookLMは他のAIチャットと何が違いますか？</summary><p class="faq-answer">ChatGPTのような単体のAIチャットと異なり、自分がアップロードした資料の内容だけをもとに回答してくれる点が大きな違いです。</p></details>
+        <details class="faq-item"><summary>NotebookLMに個人情報を入力しても大丈夫ですか？</summary><p class="faq-answer">機密情報や他人の個人情報の取り扱いには注意が必要です。利用前にプライバシーポリシーを確認しましょう。</p></details>
+        <details class="faq-item"><summary>NotebookLMはどんな仕組みで回答していますか？</summary><p class="faq-answer">アップロードされた資料をAIが読み込み、その内容をもとに質問に合った回答や要約を生成しています。</p></details>
+        <details class="faq-item"><summary>NotebookLMを使うと作業時間は短縮できますか？</summary><p class="faq-answer">はい。大量の資料を読み込む時間や、要点を整理する手間を大きく短縮できるケースが多いです。</p></details>
+        <details class="faq-item"><summary>NotebookLMを使い始めるにはどうすればいいですか？</summary><p class="faq-answer">Googleアカウントでログインし、資料をアップロードするだけで、すぐに使い始めることができます。</p></details>
+      </div>
+    </section>
+    <!-- 末尾CTA：実在する記事だけにリンクする -->
+    <div class="final-cta">
+      <div class="final-cta-eyebrow">次に読むなら</div>
+      <div class="final-cta-title">ほかのAIとも比べてみる</div>
+      <div class="final-cta-list">
+        <a href="/ai/gemini/" class="final-cta-link primary">Geminiとは？を読む <span>→</span></a>
+        <a href="/ai/chatgpt/" class="final-cta-link">ChatGPTとは？を読む <span>→</span></a>
+        <a href="/ai/" class="final-cta-link">AIツール一覧を見る <span>→</span></a>
+      </div>
+    </div>
+  </article>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="disclosure">
+      当サイトはアフィリエイトプログラムに参加しており、記事内のリンクから商品・サービスの申込があった場合、運営者が紹介料を受け取ることがあります。掲載内容は執筆時点の情報にもとづきます。最新の仕様・料金は各公式サイトをご確認ください。
+    </p>
+    <nav class="footer-links">
+      <a href="/">トップ</a>
+      <a href="/ai/">AIツール一覧</a>
+      <a href="/disclaimer/">免責事項・プライバシーポリシー</a>
+    </nav>
+    <p class="footer-text">© 2026 AI図解ラボ</p>
+  </div>
+</footer>
+</body>
+</html>
